@@ -26,4 +26,4 @@ class City{
         }
     }
 }
-//module.exports = City;
+module.exports = City;

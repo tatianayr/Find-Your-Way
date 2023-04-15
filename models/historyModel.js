@@ -28,7 +28,7 @@ class History{
                 // { id_estacao, id_cidade }
                 history.push(dbHistoryToHistory(hist));
             }
-            return { status: 200, result: seasons };
+            return { status: 200, result: history };
         } catch (err) {
             console.log(err);
             return { status: 500, result: { msg: "Something went wrong." } };
