@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.question {
+display: none;
+  width: 900px;
+  margin: 30 px 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+}
+section {
+  position: relative;
+  padding: 5%;
+  width: 110%;
+  height: 80%;
+  border-radius: 20px;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  
+}
+#nextButton, #prevButton, #subButton {
+  background-color: #d69e04;
+  border: 1px solid #d69e04;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+#nextButton, #prevButton, #subButton:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+@media (min-width: 768px) {
+  #nextButton, #prevButton, #subButton {
+      padding: 10px 30px;
+  }
+}
+
+#page1 {
+display: block;
+  letter-spacing: 1px;
+  font-size: 30px;
+  
+ 
+}
+#page2, #page3, #page4, #page5{
+  font-family: 'Ubuntu';
+  padding: 10px;
+  margin: 20px;
+  letter-spacing: 1px;
+  font-size: 30px;
+}
+
+h2 {
+  text-align: left;
+  padding: 10px;
+  font-size: 40px;
+}
+h1 {
+  text-align: left;
+  padding: 20px;
+  font-size: 2em;
+  text-align: center;
+  font-size: 80px;
+}
+
+
+.header-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  margin: 15px;
+}
+
+.header-nav a {
+  color: #425564;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 5px;
+  transition: color 0.3s linear;
+}
+
+.header-nav li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 15px 0 0;
+  padding: 13px;
+}
+
+.header-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav a:hover {
+  color: #d69e04;
+}
+

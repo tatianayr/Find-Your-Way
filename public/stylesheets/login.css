@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Viga';
+    overflow: hidden;
+}
+
+.logo{
+
+    margin-top: 5px;
+    padding: 5px;
+    size: 2%;
+    height: 20%;
+    width: 10%;
+    margin-left: 25px;
+   margin-top: -10px;
+}
+
+
+.center{
+    position: absolute;
+    left: 33%;
+    top: 15%;
+    transform: translate(-50% -50%);
+    width: 400px;
+    background-color: transparent;
+    border: none;
+    text-align: center  ;
+    background-color: white;
+}
+
+.login_header{
+    text-align: center;
+    padding: 0 0 20px 0;
+    color: #425564;
+ 
+    font-size: 25px;
+    margin-bottom: -5%;
+
+    
+}
+.center table{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+
+.text input{
+    width: 100%;
+    padding: 0 5px;
+    height: 30px;
+    border-bottom: 2px solid   #ff914d;
+    border-top: none;
+    color:#425564 ;
+    font-size: 20px;
+    margin: 10px 0;
+    margin-left: 30px;
+    border-left: none;
+    border-right: none;
+    background: none;
+    outline: none;
+
+}
+.text-a input{
+    width: 100%;
+    padding: 0 5px;
+    height: 30px;
+    border-bottom: 2px solid   #ff914d;
+    border-top: none;
+    color:#425564 ;
+    font-size: 20px;
+    margin: 10px 0;
+    margin-left: 30px;
+    border-left: none;
+    border-right: none;
+    background: none;
+    outline: none;
+    margin-top: 10%;
+    margin-left: 240%;
+    margin-bottom: 20%;
+
+}
+.create{
+    margin: -5px 0 20px 0;
+    color:#ff914d;
+    cursor: pointer;
+}
+.forgot_a{
+    margin: -5px 0 20px 0;
+    color: #ffbd59 ;
+    cursor: pointer;
+}
+.irlogin{
+    margin: -5px 0 20px 0;
+    color:#ff914d ;
+    cursor: pointer;
+}
+.loginbutton_p{
+    width: 50%;
+    height: 50%;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    background:#ff914d ;
+    border-radius: 12px;
+}
+.register_button{
+    width: 50%;
+    height: 50%;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    background:#ff914d ;
+    border-radius: 12px;
+}
+.register_main {
+    margin-left: 60%;
+}
+
+.header-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    margin: 15px;
+  }
+  
+  .header-nav a {
+    color: #425564;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 5px;
+    transition: color 0.3s linear;
+    font-family: 'Ubuntu';
+  }
+  
+  .header-nav li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px 0 0;
+    padding: 13px;
+  }
+  
+  .header-nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-nav a:hover {
+    color: #d69e04;
+  }
+  
+
+
+.footer-nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 15px;
+}
+
+  .footer-nav a {
+    color: #425564;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 5px;
+    transition: color 0.3s linear;
+  }
+  
+  .footer-nav li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px 0 0;
+    padding: 13px;
+  }
+  
+  .footer-nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-nav a:hover {
+    color: rgba(255,209,135,0.777450946198792);
+  }
+
+
+
+
+
+.warning {
+    color: darkred;
+    font-size: larger;
+}
+
+#matches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#matches section {
+    background-color: crimson;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+}
+
+/* Game CSS*/
+#game {
+    position: relative;
+}
+
+button.game {
+    font-size: 1.5em;
+    background-color: #2ea44f;
+    color: white;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 26px;
+    margin-left: 500px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-family: 'Viga', sans-serif;
+    color: #425564;
+}
+
+.reset_section {
+    font-size: 22px;
+    color: #425564;
+    margin-left: 350px;
+    margin-top: 40px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+
+.reset_button {
+    margin-left: 620px;
+    margin-top: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 120px;
+
+}
+
+h4 {
+    font-size: 26px;
+    margin-left: 500px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-family: 'Viga', sans-serif;
+    color: #425564;
+}
+
+.recuperar_section {
+    font-size: 22px;
+    color: #425564;
+    margin-left: 350px;
+    margin-top: -60px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+
+.recuperar_button {
+    margin-left: 600px;
+    margin-top: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 120px;
+
+}
+.forgot_aa{
+    margin-left: 620px;
+    color: orange;
+    margin-top: 30px;
+    
+}
+.forgot_aaa{
+    margin-left: 580px;
+    color: orange;
+    margin-top: 10px;
+
+    
+}

@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="stylesheets/login.css">
+  <script src="./javascripts/requests/usersRequests.js"></script>
+  <script src="./javascripts/register.js"></script>
+</head>
+
+<body>
+  <nav class="header-nav">
+    <ul>
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="about.html"> About us </a> </li>
+        <li><a href="contacts.html"> Contacts </a> </li>
+        <li><a href="features.html"> Features </a> </li>
+        <li><a href="form.html"> Questionnaire </a> </li>
+    </ul>
+</nav>
+  <header class="center">
+  <header class="login_header" >
+    <h1>Sign Up</h1>
+  </header>
+  <main>
+    <form action="javascript:register()">
+      <table  >
+        <tr >
+          <td class="text" ><input  type="text" autocomplete="username" id="name" placeholder="Email"></td>
+        </tr>
+      </table>  
+    <table>  
+        <tr>
+          <td class="text"><input  type="password" autocomplete="current-password" id="password" placeholder="Password"></td>
+        </tr>
+      </table>  
+      <p id="msg" class="warning"></p>
+      <p><input class="register_button" type="submit" value="Register"></p>
+      <p><a class="irlogin" href="login.html">Login page</a></p>
+    </form>
+  </main>
+  </header>
+
+</html>

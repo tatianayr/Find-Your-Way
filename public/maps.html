@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <title> Projeto Web </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Tatiana">
+    <meta name="description" content="criação de uma web app">
+    <meta name="keywords" content="html5, tecnologia">
+    <link rel="stylesheet" href="stylesheets/maps.css">
+</head>
+
+<body>
+    <h1> My Google Map</h1>
+    
+    <div id="map">
+    </div>
+    <script>
+        function initMap(){
+            var options= {
+                zoom:8,
+                center: {
+                    lat:42.3601, lng: -71.0589}}
+                var map= new google.maps.Map(document.getElementById('map'), options);
+
+            
+        }
+    </script>
+  
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkLXt8NqoaAz8doyQQHrqMwyJXwy-o-rk&callback=initMap">
+</script>
+
+<script src="map.js"></script>
+</body>
+
+
+
+
+
+</html>

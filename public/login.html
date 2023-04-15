@@ -1,0 +1,59 @@
+<html>
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="stylesheets/login.css">
+  <script src="./javascripts/utils/verifications.js"></script>
+  <script src="./javascripts/requests/usersRequests.js"></script>
+  <script src="./javascripts/login.js"></script>
+  <script src="./javascripts/register.js"></script>
+  <script src=".\javascripts\esquecer.js"></script>
+  <script src=".\javascripts\homepage.js"></script>
+
+
+</head>
+<article class="logot">
+  <img class="logo" src="./imagens/4.png" >
+</article>
+
+<body>
+ 
+    <nav class="header-nav">
+      <ul>
+          <li><a href="index.html"> Home </a></li>
+          <li><a href="about.html"> About us </a> </li>
+          <li><a href="contacts.html"> Contacts </a> </li>
+          <li><a href="features.html"> Features </a> </li>
+          <li><a href="form.html"> Questionnaire </a> </li>
+      </ul>
+  </nav>
+
+  <header class="center">
+  <header class="login_header">
+    <h1>Sign In</h1>
+  </header>
+  <main class="login_main">
+
+    <form class="login_table" action="javascript:login()">
+      <table  >
+        <tr >
+          <td class="text" ><input  type="text" autocomplete="username" id="name" placeholder="Email"></td>
+        </tr>
+      </table>  
+    <table>  
+        <tr>
+          <td class="text"><input  type="password" autocomplete="current-password" id="password" placeholder="Password"></td>
+        </tr>
+      </table>  
+      <p id="msg" class="warning"></p>
+
+      <p><input class="loginbutton_p" type="submit" value="login"></p>
+      <p><a class="create" href="register.html">Create an account</a></p>
+
+      <p><a class="forgot_a" href="esquecer.html">Forgot Password</a></p>
+    </form>
+  </main>
+  </header>
+
+</body>
+ 

@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.logo{
+
+    margin-top: 5px;
+    padding: 5px;
+    size: 2%;
+    height: 20%;
+    width: 10%;
+    margin-left: 25px;
+   margin-top: -10px;
+}
+
+button {
+    display: inline-block;
+    background-color: #fa9304;
+  
+    border: 4px double #cccccc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 28px;
+    padding: 15px;
+    width: 600px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  button:hover {
+    background-color: #ffde59;
+  }
+  
+  button:hover span {
+    padding-right: 25px;
+  }
+  
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+#background {
+    width: 100%;
+    height: 100vh;
+    /*background-image: linear-gradient(rgba(0,0,0,7), rgba(0,0,0,07));*/
+    background-size: cover;
+    background-position: center;
+}
+
+.header-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    margin: 15px;
+  }
+  
+  .header-nav a {
+    color: #425564;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 5px;
+    transition: color 0.3s linear;
+    font-family: 'Ubuntu';
+  }
+  
+  .header-nav li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px 0 0;
+    padding: 13px;
+  }
+  
+  .header-nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-nav a:hover {
+    color: rgba(255,209,135,0.777450946198792);
+  }
+  
+
+
+#list li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+    left: 200px;
+    font-size: 15px;
+}
+
+#list a {
+    text-decoration: none;
+    color: black;
+}
+
+#content {
+    color:#355268;
+    position: absolute;
+    top: 30%;
+    left: 70px;
+
+}
+
+#content h1 {
+    font-size: 60px;
+    margin: 18px 0;
+    font-family: 'viga';
+
+}
+
+#content p {
+    font-size: 25px;
+    margin: 20px 0;
+    font-family: 'Ubuntu';
+
+}
+
+.input1 {
+    width: 400px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    padding: 8px 18px;
+    font-family: 'Ubuntu';
+}
+
+.input2 {
+    width: 400px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    padding: 8px 18px;
+    left: 0px;
+    font-family: 'Ubuntu';
+}
+
+#b1 {
+    border: solid #425564;
+    color: #425564;
+    width: 100px;
+    padding: 10px 18px;
+    background-color: rgba(255,209,135,0.777450946198792);
+  
+    position: relative;
+    cursor: pointer;
+    font-family: 'Viga';
+
+}
+
+#b1 {
+    right: 10%;
+    top: 0px;
+
+}
+
+#b2 {
+    border: solid #425564;
+    color: #425564;
+    width: 100px;
+    padding: 10px 18px;
+    background-color: rgba(255,209,135,0.777450946198792);
+    
+    position: relative;
+    cursor: pointer;
+    font-family: 'Viga';
+
+
+}
+
+#b2 {
+    right: 10%;
+    top: 0px;
+
+}
+#b3 {
+    border:solid#425564 ;
+    color: #FFCEC3;
+    width: 100px;
+    padding: 10px 18px;
+    background-color: #425564;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Viga';
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+.b3-li{
+    list-style: none;
+    display: inline-block;
+   
+}
+
+#b3 {
+    right: 5%;
+    top: 0px;
+
+}
+
+.wrapper {
+    margin: 50px auto;
+    padding: 10px 10%;
+    padding-bottom: 250px;
+    text-transform: capitalize;
+    color: #355268;
+    background: #ffbd59;
+    border-radius: 15px;
+}
+
+.wrapper h1 {
+    text-align: center;
+    font-size: 45px;
+    margin: 100px 0;
+    font-family: 'Viga';
+    color: #355268;
+
+}
+
+.conatiner {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    font-family: 'Ubuntu';
+    color: #355268;
+
+
+}
+
+.box {
+    height: 150px;
+    padding: 20px;
+    font-family: 'Ubuntu';
+    background: #fff;
+    border: 8px  #425564;
+
+}
+
+.box4 h2 {
+    text-align: center;
+    color: #355268;
+    padding: 10px 0;
+    font-size: 20px;
+    font-family:'Ubuntu';
+}
+.box1 h2{
+    text-align: center;
+    color: #355268;
+    padding: 10px 0;
+    font-size: 20px;
+    font-family:'Ubuntu';
+
+}
+.box2 h2{
+    text-align: center;
+    color: #355268;
+    padding: 10px 0;
+    font-size: 20px;
+    font-family:'Ubuntu';
+
+}
+.box3 h2{
+    text-align: center;
+    color: #355268;
+    padding: 10px 0;
+    font-size: 20px;
+    font-family:'Ubuntu';
+
+}
+
+.box1, .box2, .box3, .box4 p {
+    text-align: center;
+    color: #355268;
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: 'Ubuntu';
+}
+.box1 p {
+    text-align: center;
+    color:#355268;
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: 'Ubuntu';
+}
+.box2 p {
+    text-align: center;
+    color: #355268;
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: 'Ubuntu';
+}
+.box3 p {
+    text-align: center;
+    color: #355268;
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: 'Ubuntu';
+}
+
+
+.box1 {
+    height: 150px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #eee856;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 2);
+}
+
+.box2 {
+    height: 150px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #EE8D56;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 2);
+}
+
+.box3 {
+    height: 150px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #8BDDA7;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 2);
+}
+
+.box4 {
+    height: 150px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #56CAEE;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 2);
+}

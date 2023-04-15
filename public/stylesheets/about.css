@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  .logo{
+
+    margin-top: 5px;
+    padding: 5px;
+    size: 2%;
+    height: 60%;
+    width: 40%;
+    margin-left: -100px;
+   margin-top: -65px;   
+  
+  }
+
+
+  .main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 35%;
+    padding: 124px 54px 72px;
+    box-sizing: border-box;
+    background-image: url(../imagens/pequee.jpg);
+    background-position: left top;
+    background-size: auto;
+ 
+  
+  }
+  
+  .main-content h1 {
+    font-size: 60px;
+    margin: 20px 0;
+    font-size: 5em;
+    font-weight: 800;
+    color: #355268;
+    line-height: 1em;
+    font-family: 'Viga';
+  }
+  
+  .main-content h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: black;
+    line-height: 1em;
+    font-family: 'Ubuntu';
+  }
+  
+  .main-content p {
+    font-size: 20px;
+    margin: 20px 0;
+    font-family: 'Ubuntu';
+  }
+  
+  .main-content {
+    width: 65%;
+    margin-left: 35%;
+    padding: 124px 54px 72px;
+    box-sizing: border-box;
+  }
+  
+  .main-header {
+    padding: 50px 100px;
+  
+  }
+  
+  .header-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    margin: 15px;
+  }
+  
+  .header-nav a {
+    color: #425564;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 5px;
+    transition: color 0.3s linear;
+  }
+  
+  .header-nav li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px 0 0;
+    padding: 13px;
+  }
+  
+  .header-nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-nav a:hover {
+    color: #d69e04;
+  }
+  
+  
+  button {
+    display: inline-block;
+    background-color:  #fa9304;
+  
+    border: 4px double #cccccc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 28px;
+    padding: 15px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  button:hover {
+    background-color: #f7c2f9;
+  }
+  
+  button:hover span {
+    padding-right: 25px;
+  }
+  
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
