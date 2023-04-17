@@ -29,6 +29,11 @@ async function getActivityByHistory() {
     let res = await resp.json();
     return res;
 }
+async function getCostByActivity() {
+    const resp = await fetch('/api/activities/cost/' + activity + "/" +cost);
+    let res = await resp.json();
+    return res;
+}
 
 async function question2() {
     let q2 = document.getElementById("q2");
@@ -68,6 +73,26 @@ async function question3() {
         document.getElementById("q3").appendChild(input);
         document.getElementById("q3").insertAdjacentHTML("beforeend", historyDb.act_name);
         document.getElementById("q3").appendChild(newline);
+        i++;
+    });
+}
+async function question4() {
+    let q3 = document.getElementById("q4");
+    while (q3.firstChild) {
+        q3.removeChild(q3.firstChild);
+    }
+    let res = await getCostByActivity();
+    console.log(res);
+    let i = 1;
+    res.forEach(historyDb => {
+        let input = document.createElement("input");
+        let newline = document.createElement("br");
+        input.type = "radio";
+        input.name = "history";
+        input.value = i;
+        document.getElementById("q4").appendChild(input);
+        document.getElementById("q4").insertAdjacentHTML("beforeend", historyDb.act_name);
+        document.getElementById("q4").appendChild(newline);
         i++;
     });
 }

@@ -97,6 +97,7 @@
 		var season = 1;
 		var history = 1;
 		var activity =1;
+		var cost=1;
 
 		async function nextPage() {
 			if (currentQuestion == 1) {
@@ -113,6 +114,13 @@
 					if (element.checked) activity = element.value;
 				});
 				await question3();
+			}
+			else if (currentQuestion == 3) {
+				let questions = document.getElementById("q3");
+				questions.childNodes.forEach(element => {
+					if (element.checked) cost = element.value;
+				});
+				await question4();
 			}
 			if (currentQuestion < questionPages.length) {
 				questionPages[currentQuestion - 1].style.display = "none";
