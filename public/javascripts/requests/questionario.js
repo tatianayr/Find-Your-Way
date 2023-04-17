@@ -1,3 +1,5 @@
+const { search } = require("../../../routes/historyRoutes");
+
 async function getCities() {
     const resp = await fetch('/api/seasons/' + season);
     let res = await resp.json();
@@ -16,39 +18,57 @@ async function getHistory() {
     return res;
 }
 
+async function getHistoryBySeason() {
+    const resp = await fetch('/api/seasons/history/' + season);
+    let res = await resp.json();
+    return res;
+}
+
+async function getActivityByHistory() {
+    const resp = await fetch('/api/history/activities/' + season + "/" +activity);
+    let res = await resp.json();
+    return res;
+}
+
 async function question2() {
-    let res = await getCities();
+    let q2 = document.getElementById("q2");
+    while (q2.firstChild) {
+        q2.removeChild(q2.firstChild);
+    }
+    let res = await getHistoryBySeason();
+    console.log(res);
     let i = 1;
-    res.forEach(cityDb => {
+    res.forEach(seasonDb => {
         let input = document.createElement("input");
         let newline = document.createElement("br");
         input.type = "radio";
-        input.name = "answer2";
-        input.value = "option" + i;
+        input.name = "history";
+        input.value = i;
         document.getElementById("q2").appendChild(input);
-        document.getElementById("q2").insertAdjacentHTML("beforeend", cityDb.id);
+        document.getElementById("q2").insertAdjacentHTML("beforeend", seasonDb.hist_name);
         document.getElementById("q2").appendChild(newline);
         i++;
     });
 }
 
-async function question4() {
-    let res = await getActivities();
+async function question3() {
+    let q3 = document.getElementById("q3");
+    while (q3.firstChild) {
+        q3.removeChild(q3.firstChild);
+    }
+    let res = await getActivityByHistory();
+    console.log(res);
     let i = 1;
-    res.forEach(activityDb => {
+    res.forEach(historyDb => {
         let input = document.createElement("input");
         let newline = document.createElement("br");
         input.type = "radio";
-        input.name = "answer4";
-        input.value = "option" + i;
-        document.getElementById("q4").appendChild(input);
-        document.getElementById("q4").insertAdjacentHTML("beforeend", activityDb.id);
-        document.getElementById("q4").appendChild(newline);
+        input.name = "history";
+        input.value = i;
+        document.getElementById("q3").appendChild(input);
+        document.getElementById("q3").insertAdjacentHTML("beforeend", historyDb.act_name);
+        document.getElementById("q3").appendChild(newline);
         i++;
     });
 }
-// onload = async function () {
-//     // <input type="radio" name="answer3" value="option1">1-2<br>
-//     await question6();
 
-// }

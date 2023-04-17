@@ -1,16 +1,20 @@
 <!doctype html>
 <html lang="pt-br">
+
 <head>
-    <title> Projeto Web </title>
-    <meta charset="utf-8">
-    <meta name="author" content="Tatiana">
-    <meta name="description" content="criação de uma web app">
-    <meta name="keywords" content="html5, tecnologia">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="stylesheets/form.css">
-    <script src="js/script1.js"></script>
-	
+	<title> Projeto Web </title>
+	<meta charset="utf-8">
+	<meta name="author" content="Tatiana">
+	<meta name="description" content="criação de uma web app">
+	<meta name="keywords" content="html5, tecnologia">
+	<link rel="stylesheet" href="stylesheets/form.css">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="javascripts/requests/questionario.js"></script>
+
+
 </head>
+
 <body>
 	<nav class="header-nav">
 		<ul>
@@ -25,80 +29,98 @@
 	</nav>
 
 	<section>
-	<form id="myForm">
-		<div class="question" id="page1">
-			<h1>Question 1</h1>
-			<h2>At what season would you like to make your trip?</h2>
-			<input type="radio" name="answer1" value="option1">Spring<br>
-			<input type="radio" name="answer1" value="option2">Summer<br>
-			<input type="radio" name="answer1" value="option3">Autumn<br>
-			<input type="radio" name="answer1" value="option3">Winter<br><br>
-			<input type="button" value="Next" onclick="nextPage()" id="nextButton">
-		</div>
-	
-		<div class="question" id="page2">
-			<h1>Question 2</h1>
-			<h2>which historic architecture draws more attention?</h2>
-			<input type="radio" name="answer2" value="option1">Medieval<br>
-			<input type="radio" name="answer2" value="option2">Gothic<br>
-			<input type="radio" name="answer2" value="option3">Renaissance<br>
-			<input type="radio" name="answer2" value="option3">Baroque<br>
-			<input type="radio" name="answer2" value="option3">Neoclassical<br>
-			<input type="radio" name="answer2" value="option3">Art Nouveau<br>
-			<input type="radio" name="answer2" value="option3">Modernist<br><br>
-			<input type="button" value="Previous" onclick="prevPage()" id="prevButton">
-			<input type="button" value="Next" onclick="nextPage()" id="nextButton">
-		</div>
-		<div class="question" id="page3">
-			<h1>Question 3</h1>
-			<h2>Which of these interests would you like to experience on your trip?</h2>
-			<input type="radio" name="answer2" value="option1">Nightlife<br>
-			<input type="radio" name="answer2" value="option2">Green space<br>
-			<input type="radio" name="answer2" value="option3">Cafe culture<br>
-			<input type="radio" name="answer2" value="option3">Water related activities<br><br>
-			<input type="button" value="Previous" onclick="prevPage()" id="prevButton">
-			<input type="button" value="Next" onclick="nextPage()" id="nextButton">
-		</div>
-	
-		<div class="question" id="page4">
-			<h1>Question 4</h1>
-			<h2>Would you rather visit a city:</h2>
-			<input type="radio" name="answer2" value="option1">Expensive<br>
-			<input type="radio" name="answer2" value="option2">Intermediate<br>
-			<input type="radio" name="answer2" value="option3">Cheap<br><br>
-			<input type="button" value="Previous" onclick="prevPage()" id="prevButton">
-			<input type="button" value="Next" onclick="nextPage()" id="nextButton">
-		</div>
-		<div class="question" id="page5">
-			<h1>Question 5</h1>
-			<h2>How many cities would you like to visit?</h2>
-			<input type="radio" name="answer3" value="option1">1-2<br>
-			<input type="radio" name="answer3" value="option2">3-5<br>
-			<input type="radio" name="answer3" value="option3">+6<br><br>
-			<input type="button" value="Previous" onclick="prevPage()" id="prevButton">
-			<input type="button" value="Next" onclick="nextPage()" id="nextButton">
-			<input type="submit" value="Submit" id="subButton">
-		</div>
-	</form>
-</section>
-<script>
-	document.getElementById("myForm").addEventListener("submit", function(event) {
-	  // perform some JavaScript logic here
-	  event.preventDefault(); // prevent the form from submitting
-	  window.location.href = "result.html"; // redirect to the destination URL
-	});
-  </script>
+		<form id="myForm">
+			<div class="question" id="page1">
+				<h1>Question 1</h1>
+				<h2>At what season would you like to make your trip?</h2>
+				<div id="q1">
+					<input type="radio" name="season" value="1">Spring<br>
+					<input type="radio" name="season" value="2">Summer<br>
+					<input type="radio" name="season" value="3">Autumn<br>
+					<input type="radio" name="season" value="4">Winter<br><br>
+				</div>
+				<input type="button" value="Next" onclick="nextPage()" id="nextButton">
+
+			</div>
+
+
+			<div class="question" id="page2">
+				<h1>Question 2</h1>
+				<h2>which historic architecture draws more attention?</h2>
+				<div id="q2">
+				</div>
+				<input type="button" value="Previous" onclick="prevPage()" id="prevButton">
+				<input type="button" value="Next" onclick="nextPage()" id="nextButton">
+
+			</div>
+			<div class="question" id="page3">
+				<h1>Question 3</h1>
+				<h2>Which of these interests would you like to experience on your trip?</h2>
+				<div id="q3">
+				</div>
+				<input type="button" value="Previous" onclick="prevPage()" id="prevButton">
+				<input type="button" value="Next" onclick="nextPage()" id="nextButton">
+			</div>
+
+			<div class="question" id="page4">
+				<h1>Question 4</h1>
+				<h2>Would you rather visit a city:</h2>
+				<input type="radio" name="cost" value="option1">Expensive<br>
+				<input type="radio" name="cost" value="option2">Intermediate<br>
+				<input type="radio" name="cost" value="option3">Cheap<br><br>
+				<input type="button" value="Previous" onclick="prevPage()" id="prevButton">
+				<input type="button" value="Next" onclick="nextPage()" id="nextButton">
+
+			
+			</div>
+			<div class="question" id="page5">
+				<h1>Question 5</h1>
+				<h2>How many cities would you like to visit?</h2>
+				<input type="radio" name="answer3" value="option1">1-2<br>
+				<input type="radio" name="answer3" value="option2">3-5<br>
+				<input type="radio" name="answer3" value="option3">+6<br><br>
+				<input type="button" value="Previous" onclick="prevPage()" id="prevButton">
+				<input type="submit" value="Submit" id="subButton">
+			</div>
+		</form>
+	</section>
 	<script>
+		document.getElementById("myForm").addEventListener("submit", function (event) {
+			// perform some JavaScript logic here
+			event.preventDefault(); // prevent the form from submitting
+			console.log(season);
+			// window.location.href = "result.html"; // redirect to the destination URL
+		});
+
 		var currentQuestion = 1;
 		var questionPages = document.querySelectorAll(".question");
+		var season = 1;
+		var history = 1;
+		var activity =1;
 
-		function nextPage() {
+		async function nextPage() {
+			if (currentQuestion == 1) {
+				let questions = document.getElementById("q1");
+				questions.childNodes.forEach(element => {
+					if (element.checked) season = element.value;
+				});
+				await question2();
+			}
+			
+			else if (currentQuestion == 2) {
+				let questions = document.getElementById("q2");
+				questions.childNodes.forEach(element => {
+					if (element.checked) activity = element.value;
+				});
+				await question3();
+			}
 			if (currentQuestion < questionPages.length) {
 				questionPages[currentQuestion - 1].style.display = "none";
 				currentQuestion++;
 				questionPages[currentQuestion - 1].style.display = "block";
 			}
 		}
+		
 
 		function prevPage() {
 			if (currentQuestion > 1) {
@@ -109,4 +131,5 @@
 		}
 	</script>
 </body>
+
 </html>
