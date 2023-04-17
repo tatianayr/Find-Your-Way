@@ -9,8 +9,6 @@ create table appuser (
     primary key (usr_id));
 
 
-
-
 create table cities (
 	cit_id SERIAL,
 	cit_name VARCHAR(100) NOT NULL UNIQUE ,
@@ -41,17 +39,6 @@ create table season (
 );
 
 
-
-create table transportation (
-    tran_id SERIAL,
-    tran_name VARCHAR(100) NOT NULL UNIQUE,
-    primary key(tran_id)  
-);
-create table walkability (
-    wal_id SERIAL,
-    wal_name VARCHAR(100) NOT NULL UNIQUE,
-    primary key(wal_id)  
-);
 create table sc(
     sc_cit_id int not null,
     sc_sea_id int not null,
@@ -82,24 +69,13 @@ create table ca(
 
 );
 
-create table cw(
-    cw_cit_id int not null,
-    cw_wal_id int not null,
-    CONSTRAINT cw_fk_cit FOREIGN KEY (cw_cit_id) REFERENCES cities(cit_id)
+create table cc(
+    cc_cit_id int not null,
+    cc_cost_id int not null,
+    CONSTRAINT cc_cos_cit FOREIGN KEY (cc_cit_id) REFERENCES cities(cit_id)
     ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT cw_fk_wal FOREIGN KEY (cw_wal_id) REFERENCES walkability(wal_id)
+    CONSTRAINT cc_fk_cost FOREIGN KEY (cc_cost_id) REFERENCES cost(cost_id)
     ON DELETE CASCADE ON UPDATE CASCADE
-
-);
-
-create table ct(
-    ct_cit_id int not null,
-    ct_tran_id int not null,
-    CONSTRAINT ct_fk_cit FOREIGN KEY (ct_cit_id) REFERENCES cities(cit_id)
-    ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT ct_fk_tran FOREIGN KEY (ct_tran_id) REFERENCES transportation(tran_id)
-    ON DELETE CASCADE ON UPDATE CASCADE
-
 );
 
 
