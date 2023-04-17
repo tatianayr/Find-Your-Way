@@ -36,4 +36,27 @@ class Season {
             return { status: 500, result: { msg: "Something went wrong." } };
         }
     }
+
+    static async getHistoryBySeason(sea_id) {
+        /*
+       SELECT * FROM history INNER JOIN ch ON hist_id = ch_hist_id INNER JOIN sc ON ch_cit_id = sc_cit_id WHERE sc_sea_id = 1;
+        */
+        if (!sea_id) {
+            return { status: 400, result: { msg: "Invalid season parameter." } };
+        }
+        try {
+            let dbResult = await pool.query("SELECT distinct hist_name FROM history INNER JOIN ch ON hist_id = ch_hist_id INNER JOIN sc ON ch_cit_id = sc_cit_id WHERE sc_sea_id = $1;", [sea_id]);
+            let dbSeaCity = dbResult.rows;
+            console.log(dbSeaCity)
+            let seasons = [];
+            for (let ssn of dbSeaCity) {
+                // { id_estacao, id_cidade }
+                seasons.push(ssn);
+            }
+            return { status: 200, result: seasons };
+        } catch (err) {
+            console.log(err);
+            return { status: 500, result: { msg: "Something went wrong." } };
+        }
+    }
 } module.exports = Season;

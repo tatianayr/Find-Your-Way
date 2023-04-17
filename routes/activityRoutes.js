@@ -3,7 +3,7 @@ const router = express.Router();
 const Activity = require('../models/activityModel');
 
 
-router.get('/:id', async function (req, res, next){
+router.get('/:id', async function (req, res, next) {
     try {
         console.log("Get activities of the cities");
         let result = await Activity.getCityActivity(req.params.id);
