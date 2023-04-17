@@ -45,10 +45,6 @@ insert into activity(act_name) values ('Art and culture');
 insert into activity(act_name) values ('Cafe culture');
 insert into activity(act_name) values ('Water related activities');
 
-insert into transportation(tran_name) values('Important')
-insert into transportation(tran_name) values('Not Important')
-
-
 
 insert into sc(sc_cit_id,sc_sea_id) values( 1,1);
 insert into sc(sc_cit_id,sc_sea_id) values( 1,4);
@@ -211,44 +207,25 @@ insert into ca(ca_cit_id, ca_act_id) values(21,3);
 insert into ca(ca_cit_id, ca_act_id) values(21,4);
 insert into ca(ca_cit_id, ca_act_id) values(21,5);
 
-insert into ct(ct_cit_id, ct_tran_id) values(1,1);
-insert into ct(ct_cit_id, ct_tran_id) values(1,2);
-insert into ct(ct_cit_id, ct_tran_id) values(2,1);
-insert into ct(ct_cit_id, ct_tran_id) values(2,2);
-insert into ct(ct_cit_id, ct_tran_id) values(3,1);
-insert into ct(ct_cit_id, ct_tran_id) values(3,2);
-insert into ct(ct_cit_id, ct_tran_id) values(4,2);
-insert into ct(ct_cit_id, ct_tran_id) values(5,2);
-insert into ct(ct_cit_id, ct_tran_id) values(6,1);
-insert into ct(ct_cit_id, ct_tran_id) values(6,2);
-insert into ct(ct_cit_id, ct_tran_id) values(7,1);
-insert into ct(ct_cit_id, ct_tran_id) values(7,2);
-insert into ct(ct_cit_id, ct_tran_id) values(8,1);
-insert into ct(ct_cit_id, ct_tran_id) values(8,2);
-insert into ct(ct_cit_id, ct_tran_id) values(9,1);
-insert into ct(ct_cit_id, ct_tran_id) values(9,2);
-insert into ct(ct_cit_id, ct_tran_id) values(10,1);
-insert into ct(ct_cit_id, ct_tran_id) values(10,2);
-insert into ct(ct_cit_id, ct_tran_id) values(11,1);
-insert into ct(ct_cit_id, ct_tran_id) values(11,2);
-insert into ct(ct_cit_id, ct_tran_id) values(12,2);
-insert into ct(ct_cit_id, ct_tran_id) values(13,2);
-insert into ct(ct_cit_id, ct_tran_id) values(14,2);
-insert into ct(ct_cit_id, ct_tran_id) values(15,1);
-insert into ct(ct_cit_id, ct_tran_id) values(16,2);
-insert into ct(ct_cit_id, ct_tran_id) values(17,2);
-insert into ct(ct_cit_id, ct_tran_id) values(18,2);
-insert into ct(ct_cit_id, ct_tran_id) values(19,1);
-insert into ct(ct_cit_id, ct_tran_id) values(19,2);
-insert into ct(ct_cit_id, ct_tran_id) values(20,2);
-insert into ct(ct_cit_id, ct_tran_id) values(21,1);
-insert into ct(ct_cit_id, ct_tran_id) values(21,2);
 
-
-
-
-
-
-
-
-
+insert into cc(cc_cit_id, cc_cost_id) values (1, 2);
+insert into cc(cc_cit_id, cc_cost_id) values (2, 3);
+insert into cc(cc_cit_id, cc_cost_id) values (3, 3);
+insert into cc(cc_cit_id, cc_cost_id) values (4, 3);
+insert into cc(cc_cit_id, cc_cost_id) values (5, 2);
+insert into cc(cc_cit_id, cc_cost_id) values (6, 3);
+insert into cc(cc_cit_id, cc_cost_id) values (7, 1);
+insert into cc(cc_cit_id, cc_cost_id) values (8, 3);
+insert into cc(cc_cit_id, cc_cost_id) values (9, 1);
+insert into cc(cc_cit_id, cc_cost_id) values (10, 3);
+insert into cc(cc_cit_id, cc_cost_id) values (11, 3);
+insert into cc(cc_cit_id, cc_cost_id) values (12, 2);
+insert into cc(cc_cit_id, cc_cost_id) values (13, 2);
+insert into cc(cc_cit_id, cc_cost_id) values (14, 2);
+insert into cc(cc_cit_id, cc_cost_id) values (15, 1);
+insert into cc(cc_cit_id, cc_cost_id) values (16, 2);
+insert into cc(cc_cit_id, cc_cost_id) values (17, 1);
+insert into cc(cc_cit_id, cc_cost_id) values (18, 2);
+insert into cc(cc_cit_id, cc_cost_id) values (19, 3);
+insert into cc(cc_cit_id, cc_cost_id) values (20, 2);
+insert into cc(cc_cit_id, cc_cost_id) values (21, 2);
