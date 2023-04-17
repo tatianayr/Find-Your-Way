@@ -7,7 +7,7 @@ function dbHistoryToHistory(hist){
 class History{
     constructor(id, name){
         this.id=id;
-        this.name;
+        this.name=name;
     }
     export(){
         hist.id=this.id;
