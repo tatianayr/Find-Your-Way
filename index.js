@@ -20,10 +20,12 @@ const citiesRouter= require("./routes/cidadeRoutes");
 const seasonsRouter= require("./routes/seasonsRoutes");
 const activitiesRouter=require("./routes/activityRoutes");
 const historyRouter=require("./routes/historyRoutes");
+const costRouter=require("./routes/costRoutes");
 app.use("/api/cities", citiesRouter);
 app.use("/api/seasons",seasonsRouter);
 app.use("/api/activities", activitiesRouter);
 app.use("/api/history",historyRouter);
+app.use("/api/cost",costRouter);
 const usersRouter = require("./routes/usersRoutes");
 
 
