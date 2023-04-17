@@ -1,28 +1,24 @@
-
-
-
-insert into cities( cit_name) values('Barcelona');
-insert into cities( cit_name) values('Paris');
-insert into cities( cit_name) values('Amsterdam');
-insert into cities( cit_name) values('Santorini');
-insert into cities( cit_name) values('Dubrovnik');
-insert into cities( cit_name) values('Copenhagen');
-insert into cities( cit_name) values('Lisbon');
-insert into cities( cit_name) values('Vienna');
-insert into cities( cit_name) values('Budapest');
-insert into cities( cit_name) values('Stockholm');
-insert into cities( cit_name) values('Munich');
-insert into cities( cit_name) values('Edinburgh');
-insert into cities( cit_name) values('Bruges');
-insert into cities( cit_name) values('Florence');
-insert into cities( cit_name) values('Prague');
-insert into cities( cit_name) values('Salzburg');
-insert into cities( cit_name) values('Tallinn');
-insert into cities( cit_name) values('Reykjavik');
-insert into cities( cit_name) values('Zurick');
-insert into cities( cit_name) values('Dublin');
-insert into cities( cit_name) values('Berlin');
-
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Barcelona', 41.3851, 2.1734);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Paris', 48.8566, 2.3522);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Amsterdam', 52.3676, 4.9041);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Santorini', 36.3932, 25.4615);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Dubrovnik', 42.6507, 18.0944);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Copenhagen', 55.6761, 12.5683);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Lisbon', 38.7223, 9.1393);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Vienna', 48.2082, 16.3738);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Budapest', 47.4979,  19.0402);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Stockholm', 59.3293, 18.0686);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Munich', 48.1351, 11.5820);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Edinburgh', 55.9533, 3.1883);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Bruges', 51.2093, 3.2247);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Florence', 43.7696, 11.2558);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Prague', 50.0755, 14.4378);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Salzburg', 47.8095, 13.0550);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Tallinn', 59.4369, 24.7536);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Reykjavik', 64.1466, 21.9426);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Zurick', 47.3769, 8.5417);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Dublin', 53.3498, 6.2603);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Berlin', 52.5200, 13.4050);
 
 
 insert into season(sea_name) values ('Summer');
