@@ -15,4 +15,15 @@ router.get('/:id', async function (req, res, next) {
     }
 });
 
+router.get('/cost/:seasonId/:historyId/:activityId', async function (req, res, next) {
+    try {
+      console.log("Get history of cities");
+      let result = await Activity.getCostByActivity(req.params.seasonId, req.params.historyId, req.params.activityId);
+      res.status(result.status).send(result.result);
+    } catch (err) {
+      console.log(err);
+      res.status(500).send(err);
+    }
+  });
+
 module.exports = router;

@@ -1,10 +1,10 @@
 const pool = require("../config/database");
 
-function dbActivityToActivity(cit){
-    return new City(cit.ca_act_id,cit.ca_cit_id);
+function dbActivityToActivity(act){
+    return new Activity(cit.ca_act_id,cit.ca_cit_id);
 }
 
-class City{
+class Activity{
     constructor(id, name){
         this.id=id;
         this.name=name;
@@ -25,9 +25,9 @@ class City{
             let dbCityAct = dbResult.rows;
             console.log(dbCityAct)
             let cities = [];
-            for (let cit of dbCityAct) {
+            for (let act of dbCityAct) {
                 // { id_estacao, id_cidade }
-                cities.push(dbActivityToActivity(cit));
+                cities.push(dbActivityToActivity(act));
             }
             return { status: 200, result: cities };
         } catch (err) {
@@ -49,7 +49,7 @@ class City{
             console.log(dbActCity)
             let activity = [];
             for (let act of dbActCity) {
-                activity.push(hist);
+                activity.push(act);
             }
             return { status: 200, result: activity };
         } catch (err) {
@@ -57,5 +57,5 @@ class City{
             return { status: 500, result: { msg: "Something went wrong." } };
         }
     }
-}module.exports = City;
+}module.exports = Activity;
 
