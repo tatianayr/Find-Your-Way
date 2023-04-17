@@ -35,4 +35,27 @@ class City{
             return { status: 500, result: { msg: "Something went wrong." } };
         }
     }
+
+    static async getCostByActivity(sea_id, hist_id, act_id) {
+        /*
+       SELECT * FROM history INNER JOIN ch ON hist_id = ch_hist_id INNER JOIN sc ON ch_cit_id = sc_cit_id WHERE sc_sea_id = 1;
+        */
+        if (!act_id) {
+            return { status: 400, result: { msg: "Invalid season parameter." } };
+        }
+        try {
+            let dbResult = await pool.query("SELECT distinct cost_name FROM history INNER JOIN ch ON hist_id = ch_hist_id  INNER JOIN sc ON ch_cit_id = sc_cit_id INNER JOIN ca ON ca_cit_id= ch_cit_id INNER JOIN activity ON ca_act_id=act_id   INNER JOIN cc ON cc_cit_id= ca_cit_id INNER JOIN cost ON cc_cost_id = cost_id    WHERE sc_sea_id =$3 and hist_id=$1 and act_id=$5"[sea_id, hist_id, act_id]);
+            let dbActCity = dbResult.rows;
+            console.log(dbActCity)
+            let activity = [];
+            for (let act of dbActCity) {
+                activity.push(hist);
+            }
+            return { status: 200, result: activity };
+        } catch (err) {
+            console.log(err);
+            return { status: 500, result: { msg: "Something went wrong." } };
+        }
+    }
 }module.exports = City;
+
