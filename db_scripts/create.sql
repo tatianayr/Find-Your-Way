@@ -1,5 +1,4 @@
--- Create the database with the name: shopingList
--- Then run the create table bellow
+
 
 create table appuser (
     usr_id serial,
