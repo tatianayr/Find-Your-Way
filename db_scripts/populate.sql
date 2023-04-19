@@ -1,24 +1,24 @@
-insert into cities( cit_name, , geom) values('Barcelona', ST_GeographyFromText('SRID=4326;POINT(2.1734 41.3851)'));
-insert into cities( cit_name, , geom) values('Paris', ST_GeographyFromText('SRID=4326;POINT(2.3522 48.8566)'));
-insert into cities( cit_name, , geom) values('Amsterdam', ST_GeographyFromText('SRID=4326;POINT(4.9041 52.3676)'));
-insert into cities( cit_name, , geom) values('Santorini', ST_GeographyFromText('SRID=4326;POINT(25.4615 36.3932)'));
-insert into cities( cit_name, , geom) values('Dubrovnik', ST_GeographyFromText('SRID=4326;POINT(18.0944 42.6507)'));
-insert into cities( cit_name, , geom) values('Copenhagen', ST_GeographyFromText('SRID=4326;POINT(12.5683 55.6761)'));
-insert into cities( cit_name, , geom) values('Lisbon', ST_GeographyFromText('SRID=4326;POINT(-9.2426043 38.7435977)'));
-insert into cities( cit_name, , geom) values('Vienna', ST_GeographyFromText('SRID=4326;POINT(16.3738 48.2082)'));
-insert into cities( cit_name, , geom) values('Budapest', ST_GeographyFromText('SRID=4326;POINT(18.5065015 47.4795219)'));,
-insert into cities( cit_name, , geom) values('Stockholm', ST_GeographyFromText('SRID=4326;POINT(17.8172485 59.326038)')); 
-insert into cities( cit_name, , geom) values('Munich', ST_GeographyFromText('SRID=4326;POINT(11.2300171 48.1544891)'));
-insert into cities( cit_name, , geom) values('Edinburgh', ST_GeographyFromText('SRID=4326;POINT(-3.2877387 55.9411809)'));
-insert into cities( cit_name, , geom) values('Bruges', ST_GeographyFromText('SRID=4326;POINT(3.057302 51.2606675)')); 
-insert into cities( cit_name, , geom) values('Florence', ST_GeographyFromText('SRID=4326;POINT(11.1585671 43.7799286)'));
-insert into cities( cit_name, , geom) values('Prague', ST_GeographyFromText('SRID=4326;POINT(14.3008174 50.059553)'));
-insert into cities( cit_name, , geom) values('Salzburg', ST_GeographyFromText('SRID=4326;POINT(12.9740295 47.8027805)'));
-insert into cities( cit_name, , geom) values('Tallinn', ST_GeographyFromText('SRID=4326;POINT(24.5734375 59.4715893)'));
-insert into cities( cit_name, , geom) values('Reykjavik', ST_GeographyFromText('SRID=4326;POINT(-21.9348418 64.1334671)'));
-insert into cities( cit_name, , geom) values('Zurick', ST_GeographyFromText('SRID=4326;POINT(8.454335 47.3774122)'));
-insert into cities( cit_name, , geom) values('Dublin', ST_GeographyFromText('SRID=4326;POINT(-6.4105097 53.3242066)'));
-insert into cities( cit_name, , geom) values('Berlin', ST_GeographyFromText('SRID=4326;POINT(13.095099 52.5063862)'));
+insert into cities( cit_name , geom) values('Barcelona', ST_GeographyFromText('SRID=4326;POINT(2.1734 41.3851)'));
+insert into cities( cit_name , geom) values('Paris', ST_GeographyFromText('SRID=4326;POINT(2.3522 48.8566)'));
+insert into cities( cit_name , geom) values('Amsterdam', ST_GeographyFromText('SRID=4326;POINT(4.9041 52.3676)'));
+insert into cities( cit_name , geom) values('Santorini', ST_GeographyFromText('SRID=4326;POINT(25.4615 36.3932)'));
+insert into cities( cit_name , geom) values('Dubrovnik', ST_GeographyFromText('SRID=4326;POINT(18.0944 42.6507)'));
+insert into cities( cit_name , geom) values('Copenhagen', ST_GeographyFromText('SRID=4326;POINT(12.5683 55.6761)'));
+insert into cities( cit_name , geom) values('Lisbon', ST_GeographyFromText('SRID=4326;POINT(-9.2426043 38.7435977)'));
+insert into cities( cit_name , geom) values('Vienna', ST_GeographyFromText('SRID=4326;POINT(16.3738 48.2082)'));
+insert into cities( cit_name , geom) values('Budapest', ST_GeographyFromText('SRID=4326;POINT(18.5065015 47.4795219)'));,
+insert into cities( cit_name , geom) values('Stockholm', ST_GeographyFromText('SRID=4326;POINT(17.8172485 59.326038)')); 
+insert into cities( cit_name , geom) values('Munich', ST_GeographyFromText('SRID=4326;POINT(11.2300171 48.1544891)'));
+insert into cities( cit_name , geom) values('Edinburgh', ST_GeographyFromText('SRID=4326;POINT(-3.2877387 55.9411809)'));
+insert into cities( cit_name , geom) values('Bruges', ST_GeographyFromText('SRID=4326;POINT(3.057302 51.2606675)')); 
+insert into cities( cit_name , geom) values('Florence', ST_GeographyFromText('SRID=4326;POINT(11.1585671 43.7799286)'));
+insert into cities( cit_name , geom) values('Prague', ST_GeographyFromText('SRID=4326;POINT(14.3008174 50.059553)'));
+insert into cities( cit_name , geom) values('Salzburg', ST_GeographyFromText('SRID=4326;POINT(12.9740295 47.8027805)'));
+insert into cities( cit_name , geom) values('Tallinn', ST_GeographyFromText('SRID=4326;POINT(24.5734375 59.4715893)'));
+insert into cities( cit_name,  geom) values('Reykjavik', ST_GeographyFromText('SRID=4326;POINT(-21.9348418 64.1334671)'));
+insert into cities( cit_name , geom) values('Zurick', ST_GeographyFromText('SRID=4326;POINT(8.454335 47.3774122)'));
+insert into cities( cit_name, geom) values('Dublin', ST_GeographyFromText('SRID=4326;POINT(-6.4105097 53.3242066)'));
+insert into cities( cit_name,  geom) values('Berlin', ST_GeographyFromText('SRID=4326;POINT(13.095099 52.5063862)'));
 
 
 insert into season(sea_name) values ('Summer');
