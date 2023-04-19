@@ -1,5 +1,4 @@
--- Create the database with the name: shopingList
--- Then run the create table bellow
+
 
 create table appuser (
     usr_id serial,
@@ -12,8 +11,7 @@ create table appuser (
 create table cities (
 	cit_id SERIAL,
 	cit_name VARCHAR(100) NOT NULL UNIQUE ,
-    cit_latitude DECIMAL not null,
-    cit_longitude DECIMAL not null,
+    geom geography(Point, 4326),
     primary key(cit_id)  
 );
 create table activity (

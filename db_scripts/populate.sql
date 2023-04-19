@@ -1,24 +1,24 @@
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Barcelona', 41.3851, 2.1734);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Paris', 48.8566, 2.3522);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Amsterdam', 52.3676, 4.9041);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Santorini', 36.3932, 25.4615);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Dubrovnik', 42.6507, 18.0944);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Copenhagen', 55.6761, 12.5683);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Lisbon', 38.7223, 9.1393);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Vienna', 48.2082, 16.3738);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Budapest', 47.4979,  19.0402);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Stockholm', 59.3293, 18.0686);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Munich', 48.1351, 11.5820);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Edinburgh', 55.9533, 3.1883);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Bruges', 51.2093, 3.2247);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Florence', 43.7696, 11.2558);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Prague', 50.0755, 14.4378);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Salzburg', 47.8095, 13.0550);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Tallinn', 59.4369, 24.7536);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Reykjavik', 64.1466, 21.9426);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Zurick', 47.3769, 8.5417);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Dublin', 53.3498, 6.2603);
-insert into cities( cit_name, cit_latitude, cit_longitude) values('Berlin', 52.5200, 13.4050);
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Barcelona', ST_GeographyFromText('SRID=4326;POINT(2.1734 41.3851)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Paris', ST_GeographyFromText('SRID=4326;POINT(2.3522 48.8566)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Amsterdam', ST_GeographyFromText('SRID=4326;POINT(4.9041 52.3676)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Santorini', ST_GeographyFromText('SRID=4326;POINT(25.4615 36.3932)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Dubrovnik', ST_GeographyFromText('SRID=4326;POINT(18.0944 42.6507)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Copenhagen', ST_GeographyFromText('SRID=4326;POINT(12.5683 55.6761)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Lisbon', ST_GeographyFromText('SRID=4326;POINT(-9.2426043 38.7435977)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Vienna', ST_GeographyFromText('SRID=4326;POINT(16.3738 48.2082)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Budapest', ST_GeographyFromText('SRID=4326;POINT(18.5065015 47.4795219)'));,
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Stockholm', ST_GeographyFromText('SRID=4326;POINT(17.8172485 59.326038)')); 
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Munich', ST_GeographyFromText('SRID=4326;POINT(11.2300171 48.1544891)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Edinburgh', ST_GeographyFromText('SRID=4326;POINT(-3.2877387 55.9411809)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Bruges', ST_GeographyFromText('SRID=4326;POINT(3.057302 51.2606675)')); 
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Florence', ST_GeographyFromText('SRID=4326;POINT(11.1585671 43.7799286)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Prague', ST_GeographyFromText('SRID=4326;POINT(14.3008174 50.059553)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Salzburg', ST_GeographyFromText('SRID=4326;POINT(12.9740295 47.8027805)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Tallinn', ST_GeographyFromText('SRID=4326;POINT(24.5734375 59.4715893)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Reykjavik', ST_GeographyFromText('SRID=4326;POINT(-21.9348418 64.1334671)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Zurick', ST_GeographyFromText('SRID=4326;POINT(8.454335 47.3774122)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Dublin', ST_GeographyFromText('SRID=4326;POINT(-6.4105097 53.3242066)'));
+insert into cities( cit_name, cit_latitude, cit_longitude) values('Berlin', ST_GeographyFromText('SRID=4326;POINT(13.095099 52.5063862)'));
 
 
 insert into season(sea_name) values ('Summer');
