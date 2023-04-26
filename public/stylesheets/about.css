@@ -60,9 +60,9 @@ body {
   }
   
   .main-content {
-    width: 65%;
+    width: 70%;
     margin-left: 35%;
-    padding: 124px 54px 72px;
+    padding: 130px 54px 72px;
     box-sizing: border-box;
   }
   
@@ -73,10 +73,10 @@ body {
   
   .header-nav {
     position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    margin: 15px;
+  top: 0;
+  right: 0;
+  height: 5%;
+  margin: 15px;
   }
   
   .header-nav a {

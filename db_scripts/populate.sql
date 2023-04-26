@@ -6,7 +6,7 @@ insert into cities( cit_name , geom) values('Dubrovnik', ST_GeographyFromText('S
 insert into cities( cit_name , geom) values('Copenhagen', ST_GeographyFromText('SRID=4326;POINT(12.5683 55.6761)'));
 insert into cities( cit_name , geom) values('Lisbon', ST_GeographyFromText('SRID=4326;POINT(-9.2426043 38.7435977)'));
 insert into cities( cit_name , geom) values('Vienna', ST_GeographyFromText('SRID=4326;POINT(16.3738 48.2082)'));
-insert into cities( cit_name , geom) values('Budapest', ST_GeographyFromText('SRID=4326;POINT(18.5065015 47.4795219)'));,
+insert into cities( cit_name , geom) values('Budapest', ST_GeographyFromText('SRID=4326;POINT(18.5065015 47.4795219)'));
 insert into cities( cit_name , geom) values('Stockholm', ST_GeographyFromText('SRID=4326;POINT(17.8172485 59.326038)')); 
 insert into cities( cit_name , geom) values('Munich', ST_GeographyFromText('SRID=4326;POINT(11.2300171 48.1544891)'));
 insert into cities( cit_name , geom) values('Edinburgh', ST_GeographyFromText('SRID=4326;POINT(-3.2877387 55.9411809)'));
