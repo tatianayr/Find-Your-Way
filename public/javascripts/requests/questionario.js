@@ -46,7 +46,7 @@ async function question2() {
     res.forEach(seasonDb => {
         let input = document.createElement("input");
         let newline = document.createElement("br");
-        input.type = "radio";
+        input.type = "checkbox";
         input.name = "history";
         input.value = i;
         document.getElementById("q2").appendChild(input);
@@ -67,7 +67,7 @@ async function question3() {
     res.forEach(historyDb => {
         let input = document.createElement("input");
         let newline = document.createElement("br");
-        input.type = "radio";
+        input.type = "checkbox";
         input.name = "history";
         input.value = i;
         document.getElementById("q3").appendChild(input);
