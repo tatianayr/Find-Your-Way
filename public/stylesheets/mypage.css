@@ -234,7 +234,7 @@ button {
 }
 
 .wrapper {
-    margin: 50px auto;
+    margin: -80px auto;
     padding: 10px 10%;
     padding-bottom: 250px;
     text-transform: capitalize;
@@ -271,14 +271,7 @@ button {
 
 }
 
-.box4 h2 {
-    text-align: center;
-    color: #355268;
-    padding: 10px 0;
-    font-size: 20px;
-    font-family:'Ubuntu';
-}
-.box1 h2{
+.box1, .box2, .box3, .box4 h2{
     text-align: center;
     color: #355268;
     padding: 10px 0;
@@ -286,22 +279,7 @@ button {
     font-family:'Ubuntu';
 
 }
-.box2 h2{
-    text-align: center;
-    color: #355268;
-    padding: 10px 0;
-    font-size: 20px;
-    font-family:'Ubuntu';
 
-}
-.box3 h2{
-    text-align: center;
-    color: #355268;
-    padding: 10px 0;
-    font-size: 20px;
-    font-family:'Ubuntu';
-
-}
 
 .box1, .box2, .box3, .box4 p {
     text-align: center;

@@ -1,16 +1,12 @@
 const { search } = require("../../../routes/historyRoutes");
 
+
 async function getCities() {
     const resp = await fetch('/api/seasons/' + season);
     let res = await resp.json();
     return res;
 }
 
-async function getActivities() {
-    const resp = await fetch('/api/activities/' + city);
-    let res = await resp.json();
-    return res;
-}
 
 async function getHistory() {
     const resp = await fetch('/api/history/' + history);
@@ -34,6 +30,7 @@ async function getCostByActivity() {
     let res = await resp.json();
     return res;
 }
+
 
 async function question2() {
     let q2 = document.getElementById("q2");
@@ -96,5 +93,24 @@ async function question4() {
         document.getElementById("q4").appendChild(newline);
         i++;
     });
-}  
-
+} 
+async function question5() {
+    let q5 = document.getElementById("q5");
+    while (q5.firstChild) {
+        q5.removeChild(q5.firstChild);
+    }
+    let res = await getNumberOfCities();
+    console.log(res);
+    let i = 1;
+    res.forEach(historyDb => {
+        let input = document.createElement("input");
+        let newline = document.createElement("br");
+        input.type = "checkbox";
+        input.name = "history";
+        input.value = i;
+        document.getElementById("q5").appendChild(input);
+        document.getElementById("q5").insertAdjacentHTML("beforeend", historyDb.act_name);
+        document.getElementById("q5").appendChild(newline);
+        i++;
+    });
+} 

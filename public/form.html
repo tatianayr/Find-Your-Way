@@ -16,7 +16,10 @@
 </head>
 
 <body>
+
+	
 	<nav class="header-nav">
+		
 		<ul>
 			<li><a href="index.html"> Home </a></li>
 			<li><a href="about.html"> About us </a> </li>
@@ -65,22 +68,23 @@
 			<div class="question" id="page4">
 				<h1>Question 4</h1>
 				<h2>Would you rather visit a city:</h2>
-				<div id="q4">
-
-				</div>
+				<div id="q4"></div>
+				<div id="cityList"></div> <!-- new element to display city names -->
 				<input type="button" value="Previous" onclick="prevPage()" id="prevButton">
-				<input type="button" value="Next" onclick="nextPage()" id="nextButton">
+				<input type="submit" value="Submit" id="subButton" onclick="showCities()"> <!-- modified Submit button -->
 			</div>
 
-			<div class="question" id="page5">
+			<!--<div class="question" id="page5">
 				<h1>Question 5</h1>
 				<h2>How many cities would you like to visit?</h2>
-				<input type="radio" name="answer3" value="option1">1-2<br>
-				<input type="radio" name="answer3" value="option2">3-5<br>
-				<input type="radio" name="answer3" value="option3">+6<br><br>
+				<div id="q5">
+					<input type="radio" name="number" value="1">1-2<br>
+					<input type="radio" name="number" value="2">3-5<br>
+					<input type="radio" name="number" value="3">+6<br><br>
+			    </div>
 				<input type="button" value="Previous" onclick="prevPage()" id="prevButton">
 				<input type="submit" value="Submit" id="subButton">
-			</div>
+			</div> -->
 		</form>
 	</section>
 	<script>
@@ -97,6 +101,8 @@
 		var history = 1;
 		var activity =1;
 		var cost=1;
+		var number=1;
+		
 
 		async function nextPage() {
 			if (currentQuestion == 1) {
@@ -121,6 +127,13 @@
 				});
 				await question4();
 			}
+			else if (currentQuestion == 4) {
+				let questions = document.getElementById("q4");
+				questions.childNodes.forEach(element => {
+					if (element.checked) number = element.value;
+				});
+				await question5();
+			}
 			if (currentQuestion < questionPages.length) {
 				questionPages[currentQuestion - 1].style.display = "none";
 				currentQuestion++;
@@ -137,6 +150,23 @@
 			}
 		}
 	</script>
+	<!--<script>
+		const btnSubmit = document.getElementById('subButton');
+		btnSubmit.addEventListener('click', async () => {
+			const season = 'Summer' // get selected season from user input
+			const activity = 'Baroque' // get selected activity from user input
+			const cost = "Expensive" // get selected cost from user input
+	  
+			const cityNames = await getCityNamesByCost(season, activity, cost);
+			const q4 = document.getElementById('q4');
+			q4.innerHTML = '';
+			for (const city of cityNames.result) {
+				const p = document.createElement('p');
+				p.innerText = city.cit_name;
+				q4.appendChild(p);
+			}
+		});
+	  </script>-->
 </body>
 
 </html>

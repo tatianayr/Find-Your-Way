@@ -5,8 +5,8 @@ let directionsRenderer;
 function initMap() {
   // criar um objeto de mapa
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 50.8503, lng: 4.3517 }, // coordenadas do centro do mapa
-    zoom: 13, // zoom inicial do mapa
+    center: { lat: 38.7435977, lng: -9.2426043 }, // coordenadas do centro do mapa
+                zoom: 11, // zoom inicial do mapa
   });
    // Cria um objeto de mapa com as opções de limites para a Europa
    var map = new google.maps.Map(document.getElementById("map"), {
@@ -21,6 +21,9 @@ function initMap() {
       },
       strictBounds: true,
     },});
+
+    //mostrar cidades no mapa
+    
 
   // criar um objeto de serviço de direções
   directionsService = new google.maps.DirectionsService();  

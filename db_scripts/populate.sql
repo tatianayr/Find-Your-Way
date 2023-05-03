@@ -20,7 +20,7 @@ insert into cities( cit_name , geom) values('Zurick', ST_GeographyFromText('SRID
 insert into cities( cit_name, geom) values('Dublin', ST_GeographyFromText('SRID=4326;POINT(-6.4105097 53.3242066)'));
 insert into cities( cit_name,  geom) values('Berlin', ST_GeographyFromText('SRID=4326;POINT(13.095099 52.5063862)'));
 
-
+64.7707732,-24.5186077
 insert into season(sea_name) values ('Summer');
 insert into season(sea_name) values ('Autumn');
 insert into season(sea_name) values ('Winter');

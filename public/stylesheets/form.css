@@ -9,6 +9,7 @@
   width: 900px;
   margin: 30 px 0;
 }
+
 body {
   display: flex;
   justify-content: center;
@@ -98,6 +99,7 @@ h1 {
 }
 
 .header-nav a {
+  font-family: sans-serif;
   color: #425564;
   text-decoration: none;
   text-transform: uppercase;
@@ -121,4 +123,11 @@ h1 {
 .header-nav a:hover {
   color: #d69e04;
 }
-
+.logo{
+  padding: 5px;
+  size: 20px;
+  height: auto;
+  width: 500px;
+  margin-left: -130px;
+ margin-top: -60px;
+}
