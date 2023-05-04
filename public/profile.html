@@ -1,20 +1,67 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>Profile</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-  <script src="./javascripts/utils/verifications.js"></script>
-  <script src="./javascripts/requests/usersRequests.js"></script>
-  <script src="./javascripts/profile.js"></script>
-</head>  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil</title>
+</head>
+
 <body>
-  <header>  
-    <h2 ><span id="user">Hello ______</span>
-      <input type="button" value="Logout" onclick="logout()"> </h2>
-    <h1>Profile Page</h1></header>
+  <header>
+    <img src="./imagens/logo.png" alt="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="about.html"> About us </a> </li>
+        <li><a href="features.html"> Features </a> </li>
+        <li><a href="contacts.html"> Contacts </a> </li>
+        <li><a href="form.html"> Questionnaire </a> </li>
+        <li><a href="login.html"> Sign In</a> </li>
+        <li><a href="profile.html"> <img src="./imagens/perfilicon.png" alt="perfilicon"> </a> </li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <h2>No more information to show at this moment</h2>
+    <section>
+      <a href="profile.html">
+        <button type="button">Account Settings</button>
+      </a>
+      <a href="profile.html">
+        <button type="button">Saved Routes</button>
+      </a>
+      <a href="profile.html">
+        <button type="button">Sign Out</button>
+      </a>
+    </section>
+    <section>
+      <img src="./imagens/perfilicon.png" alt="perfil icon">
+      <table  >
+        <tr >
+          <td class="text" ><input  type="text" autocomplete="username" id="name" placeholder="Email"></td>
+        </tr>
+      </table>  
+    <table>  
+        <tr>
+          <td class="text"><input  type="email" autocomplete="email" id="email" placeholder="Email"></td>
+        </tr>
+      </table>  
+      <a href="profile.html">
+        <button type="button">Change Account</button>
+      </a>
+      <a href="profile.html">
+        <button type="button">Change Photo</button>
+      </a>
+      <a href="profile.html">
+        <button type="button">Delete Account</button>
+      </a>
+    </section>
   </main>
+  <footer>
+    
+  </footer>
+
 </body>
 
 </html>
