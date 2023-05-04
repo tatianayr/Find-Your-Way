@@ -14,4 +14,14 @@ router.get('', async function (req, res, next){
     }
 });
 
+router.get('/polygon', async (req, res, next) => {
+    try {
+      const { status, result } = await City.getPolygon();
+      res.status(status).send(result);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send(err);
+    }
+  });
+
 module.exports = router;
