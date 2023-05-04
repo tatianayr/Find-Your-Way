@@ -24,4 +24,14 @@ router.get('/polygon', async (req, res, next) => {
     }
   });
 
+  router.get('/form/:seasonId/:historyId/:activityId/:costId', async (req, res, next) => {
+    try {
+      const { status, result } = await City.getNameOfCitiesByForm(req.params.seasonId, req.params.historyId, req.params.activityId, req.params.costId);
+      res.status(status).send(result);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send(err);
+    }
+  });
+
 module.exports = router;
