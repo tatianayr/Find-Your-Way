@@ -1,55 +1,63 @@
+body{
+    display: grid;
+    grid-template-areas: 'h' 'main' 'f';
+}
 
 header {
     display: flex;
+    grid-area: h;
     justify-content: center;
     align-items: center;
     height: 100px;
-    background-color: #fff;
+    background-color: blue;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
   }
-  
-  /* Style for header navigation */
+
+.perfil{
+    left: 0;
+}
   .header-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-   
-  }
-  
-  .header-nav ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header-nav li {
-    margin-right: 20px;
-  }
-  
-  .header-nav li:last-child {
-    margin-right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 5%;
+  margin: 15px;
   }
   
   .header-nav a {
     color: #425564;
     text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 5px;
+    transition: color 0.3s linear;
+    font-family: 'Ubuntu';
+  }
+  
+  .header-nav li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px 0 0;
+    padding: 13px;
+  }
+  
+  .header-nav ul {
+    margin: 0;
+    padding: 0;
   }
   
   .header-nav a:hover {
-    color: #ffbd54;
+    color: rgba(255,209,135,0.777450946198792);
   }
-  
-  /* Style for main */
+
   main {
     display: flex;
+    grid-area: main;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 50px;
+    background-color: greenyellow;
   }
   
   section {
@@ -101,6 +109,7 @@ header {
   /* Style for footer */
   footer {
     display: flex;
+    grid-area: f;
     justify-content: center;
     align-items: center;
     height: 100px;
