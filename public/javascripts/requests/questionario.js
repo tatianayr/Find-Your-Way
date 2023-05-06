@@ -31,6 +31,12 @@ async function getCostByActivity() {
     return res;
 }
 
+async function getNameOfCitiesByForm() {
+    const resp = await fetch('/api/cities/season/history/activities/cost' + season+ "/"+history+ "/" +activity + "/" +cost);
+    let res = await resp.json();
+    return res;
+}
+
 
 async function question2() {
     let q2 = document.getElementById("q2");
