@@ -1,73 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
-.logo{
 
+.hero {
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    width: 7%;
     margin-top: 5px;
-    padding: 5px;
-    size: 2%;
-    height: 20%;
-    width: 10%;
-    margin-left: 25px;
-   margin-top: -10px;
 }
 
-button {
-    display: inline-block;
-    background-color: #fa9304;
-  
-    border: 4px double #cccccc;
-    color: #ffffff;
-    text-align: center;
-    font-size: 28px;
-    padding: 15px;
-    width: 600px;
-    transition: all 0.5s;
+.perfil {
     cursor: pointer;
-    margin: 5px;
-  }
-  
-  button span {
+    border-radius: 50%;
+    right: 0;
+    width: 40px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2px 2%;
+    position: relative;
+}
+
+nav ul {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px 0 0;
+    padding: 13px;
+}
+
+nav ul li a {
+    color: #425564;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 5px;
+    transition: color 0.3s linear;
+    font-family: 'Ubuntu';
+}
+
+nav a:hover {
+    color: #ffde59;
+}
+
+.go{
+    width: 100px;
+    height: 40px;
+    border: 3px solid #ff914d;
+    border-radius: 12px;
+    color: white;
+    background-color: #ff914d;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+
+button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
-  }
-  
-  button span:after {
+}
+
+button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
     transition: 0.5s;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #ffde59;
-  }
-  
-  button:hover span {
+}
+
+button:hover span {
     padding-right: 25px;
-  }
-  
-  button:hover span:after {
+}
+
+button:hover span:after {
     opacity: 1;
     right: 0;
-  }
-  
-  button span:after {
+}
+
+button span:after {
     content: "\00bb";
     position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
     transition: 0.5s;
-  }
+}
 
 #background {
     width: 100vw;
@@ -76,42 +123,6 @@ button {
     background-size: cover;
     background-position: center;
 }
-
-.header-nav {
-    position: absolute;
-  top: 0;
-  right: 0;
-  height: 5%;
-  margin: 15px;
-  }
-  
-  .header-nav a {
-    color: #425564;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 5px;
-    transition: color 0.3s linear;
-    font-family: 'Ubuntu';
-  }
-  
-  .header-nav li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 15px 0 0;
-    padding: 13px;
-  }
-  
-  .header-nav ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header-nav a:hover {
-    color: rgba(255,209,135,0.777450946198792);
-  }
-  
-
 
 #list li {
     list-style-type: none;
@@ -128,10 +139,11 @@ button {
 }
 
 #content {
-    color:#355268;
+    color: #425564;
     position: absolute;
-    top: 30%;
-    left: 70px;
+    top: 15%;
+    margin: 0 20% 0 20%;
+    text-align: center;
 
 }
 
@@ -139,6 +151,9 @@ button {
     font-size: 60px;
     margin: 18px 0;
     font-family: 'viga';
+    color: #ff914d;
+    text-align: center;
+    font-weight: bold;
 
 }
 
@@ -146,6 +161,8 @@ button {
     font-size: 25px;
     margin: 20px 0;
     font-family: 'Ubuntu';
+    color: #425564;
+    font-weight: bold;
 
 }
 
@@ -175,8 +192,8 @@ button {
     color: #425564;
     width: 100px;
     padding: 10px 18px;
-    background-color: rgba(255,209,135,0.777450946198792);
-  
+    background-color: rgba(255, 209, 135, 0.777450946198792);
+
     position: relative;
     cursor: pointer;
     font-family: 'Viga';
@@ -194,8 +211,8 @@ button {
     color: #425564;
     width: 100px;
     padding: 10px 18px;
-    background-color: rgba(255,209,135,0.777450946198792);
-    
+    background-color: rgba(255, 209, 135, 0.777450946198792);
+
     position: relative;
     cursor: pointer;
     font-family: 'Viga';
@@ -208,8 +225,9 @@ button {
     top: 0px;
 
 }
+
 #b3 {
-    border:solid#425564 ;
+    border: solid#425564;
     color: #FFCEC3;
     width: 100px;
     padding: 10px 18px;
@@ -219,12 +237,13 @@ button {
     font-family: 'Viga';
     text-decoration: none;
     text-transform: uppercase;
-    
+
 }
-.b3-li{
+
+.b3-li {
     list-style: none;
     display: inline-block;
-   
+
 }
 
 #b3 {
@@ -267,21 +286,27 @@ button {
     padding: 20px;
     font-family: 'Ubuntu';
     background: #fff;
-    border: 8px  #425564;
+    border: 8px #425564;
 
 }
 
-.box1, .box2, .box3, .box4 h2{
+.box1,
+.box2,
+.box3,
+.box4 h2 {
     text-align: center;
     color: #355268;
     padding: 10px 0;
     font-size: 20px;
-    font-family:'Ubuntu';
+    font-family: 'Ubuntu';
 
 }
 
 
-.box1, .box2, .box3, .box4 p {
+.box1,
+.box2,
+.box3,
+.box4 p {
     text-align: center;
     color: #355268;
     font-size: 14px;
@@ -322,5 +347,3 @@ button {
     background: #56CAEE;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 2);
 }
-
-

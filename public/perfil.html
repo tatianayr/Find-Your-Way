@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/profile.css">~
+    <link rel="stylesheet" href="stylesheets/profile.css">
     <script src="javascripts/profile.js"></script>
     <title>Perfil</title>
 </head>
@@ -23,7 +23,7 @@
                 <li><a href="login.html"> Sign In</a> </li>
                 <li><a href="register.html"> Sign Up</a> </li>
             </ul>
-            <img src="./imagens/perfilicon.png" alt="perfilicon" class="perfil">
+            <a href="perfil.html"><img src="./imagens/perfilicon.png" alt="perfilicon" class="perfil"></a>
         </nav>
     </div>
 
@@ -39,9 +39,10 @@
     </section>
 
     <main>
-        <section>
-            <img class="perfil-grande" src="./imagens/User.png" alt="user icon">
 
+            <img class="perfil-grande" src="./imagens/User.png" alt="user icon">
+    
+        <section class="name">  
             <table>
                 <tr>
                     <td class="text"><input type="text" autocomplete="username" id="name" placeholder="Name"></td>
@@ -52,7 +53,7 @@
                     <td class="text"><input type="email" autocomplete="email" id="email" placeholder="Email"></td>
                 </tr>
             </table>
-
+        </section>   
             <section class="down">
                 <a href="profile.html">
                     <button class="button" type="button">Change Account</button>

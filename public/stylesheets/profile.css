@@ -124,8 +124,8 @@ main {
 
 .perfil-grande {
   padding: 20px;
-  width: 40%;
-  margin-left: -60%;
+  width: 20%;
+  margin-left: -40%;
 }
 
 .dados {
@@ -163,3 +163,5 @@ main {
   cursor: pointer;
   letter-spacing: 2px;
 }
+
+

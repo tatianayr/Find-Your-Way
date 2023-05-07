@@ -11,6 +11,8 @@ window.onload = async function () {
 }
 
 async function logout() {
+    let msgDOM = document.getElementById("msg");
+    msgDOM.textContent = "";
     try {
         let result = await requestLogout();
         if (!result.successful || result.err)
