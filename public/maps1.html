@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="stylesheets/maps.css">
+    <script src="javascripts/script_maps.js"></script> 
     <title>Get User Location</title>
     
     
@@ -8,6 +10,23 @@
     
   </head>
   <body>
+    <div class="hero">
+      <nav>
+          <img src="./imagens/logo.png" alt="logo" class="logo">
+          <ul>
+              <li><a href="index.html"> Home </a></li>
+              <li><a href="about.html"> About us </a> </li>
+              <li><a href="features.html"> Features </a> </li>
+              <li><a href="contacts.html"> Contacts </a> </li>
+              <li><a href="form.html"> Questionnaire </a> </li>
+              <li><a href="login.html"> Sign In</a> </li>
+              <li><a href="register.html"> Sign Up</a> </li>
+          </ul>
+          <img src="./imagens/perfilicon.png" alt="perfilicon" class="perfil">
+      </nav>
+  </div>
+
+
     <div id="map"></div>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkLXt8NqoaAz8doyQQHrqMwyJXwy-o-rk&callback=initMap">
@@ -42,6 +61,10 @@
       #map {
         height: 400px;
         width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
       }
     </style>
   </body>
