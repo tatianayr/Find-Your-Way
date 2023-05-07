@@ -15,7 +15,7 @@ async function logout() {
         let result = await requestLogout();
         if (!result.successful || result.err)
             throw result.err || { err: "Not successfull" }
-        window.location.pathname = "/index.html"
+        window.location.pathname = "/perfil.html"
     } catch (err) {
         console.log(err);
        // alert("Something is not working");

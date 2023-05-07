@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/profile.css">~
+    <script src="javascripts/profile.js"></script>
+    <title>Perfil</title>
+</head>
+
+<body>
+    <div class="hero">
+        <nav>
+            <img src="./imagens/logo.png" alt="logo" class="logo">
+            <ul>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="about.html"> About us </a> </li>
+                <li><a href="features.html"> Features </a> </li>
+                <li><a href="contacts.html"> Contacts </a> </li>
+                <li><a href="form.html"> Questionnaire </a> </li>
+                <li><a href="login.html"> Sign In</a> </li>
+                <li><a href="register.html"> Sign Up</a> </li>
+            </ul>
+            <img src="./imagens/perfilicon.png" alt="perfilicon" class="perfil">
+        </nav>
+    </div>
+
+    <section class="up">
+        <a href="profile.html">
+            <button class="settings" type="button">Account Settings</button>
+        </a>
+        <a href="profile.html">
+            <button class="routes" type="button">Saved Routes</button>
+        </a>
+        
+            <input class="out" type="button" value="Logout" onclick="logout()"> 
+    </section>
+
+    <main>
+        <section>
+            <img class="perfil-grande" src="./imagens/User.png" alt="user icon">
+
+            <table>
+                <tr>
+                    <td class="text"><input type="text" autocomplete="username" id="name" placeholder="Name"></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td class="text"><input type="email" autocomplete="email" id="email" placeholder="Email"></td>
+                </tr>
+            </table>
+
+            <section class="down">
+                <a href="profile.html">
+                    <button class="button" type="button">Change Account</button>
+                </a>
+                <a  href="profile.html">
+                    <button class="button" type="button">Change Photo</button>
+                </a>
+                <a  href="profile.html">
+                    <button class="button" type="button">Delete Account</button>
+                </a>
+            </section>
+        </section>
+    </main>
+
+</body>
+
+</html>
