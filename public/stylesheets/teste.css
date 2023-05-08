@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.usr-img{
+    width: 130px;
+    height: 130px;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    margin: 45% 45%;
+  }
+  
+  #photo{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+  }
+  
+#file{
+    display: none;
+}
+
+#uploadimg{
+    position: absolute;
+
+}
+#uploadimg{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    padding: 6px 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    background-color: #ff914d;
+    margin-top: 7%;
+    margin-right: 10%;
+
+  }

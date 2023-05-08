@@ -2,86 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Profile Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: #fff;
-      border-radius: 5px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      margin-top: 50px;
-    }
-
-    .avatar {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      margin: 0 auto;
-      display: block;
-      background-color: #ddd;
-      background-image: url("https://placekitten.com/150/150");
-      background-size: cover;
-    }
-
-    h1 {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 32px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0;
-    }
-
-    li {
-      display: inline-block;
-      margin-right: 10px;
-    }
-
-    .label {
-      font-weight: bold;
-      margin-right: 5px;
-    }
-
-    .value {
-      color: #888;
-    }
-
-    .button {
-      display: inline-block;
-      background-color: #4CAF50;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .button:hover {
-      background-color: #3e8e41;
-    }
-  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheets/teste.css">
+  <title>Document</title>
 </head>
 <body>
-  <div class="container">
-    <div class="avatar"></div>
-    <h1>John Doe</h1>
-    <ul>
-      <li><span class="label">Email:</span><span class="value">johndoe@example.com</span></li>
-      <li><span class="label">Phone:</span><span class="value">555-555-5555</span></li>
-      <li><span class="label">Location:</span><span class="value">San Francisco, CA</span></li>
-    </ul>
-    <a href="#" class="button">Edit Profile</a>
-  </div>
+  <div class="user-img">
+    <img src="./imagens/perfilicon.png" id="photo">
+    <input type="file"  id="file">
+    <label for="file" id="uploadimg"><i class="fas fa-camara"></i></label>
+
+</div>
 </body>
 </html>

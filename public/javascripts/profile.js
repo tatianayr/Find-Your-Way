@@ -1,3 +1,23 @@
+const imgDiv= document.querySelector('.user-img');
+const img=document.querySelector('#photo');
+const file=document.querySelector('#file');
+const uploadbtn =document.querySelector('#uploadbtn');
+
+file.addEventListener('change', function(){
+    const chosedfile = this.file(0);
+
+    if(chosedfile){
+        const reader = new FileReader();
+
+        reader.readAsDataURL('load', function(){
+            img.setAttribute('scr', reader.result);
+        });
+        reader.readAsDataURL(chosedfile);
+    }
+})
+
+
+
 window.onload = async function () {
     try {
         let result = await checkAuthenticated(true);

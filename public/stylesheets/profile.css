@@ -257,3 +257,33 @@ main {
   margin-bottom: 20%;
 
 }
+
+.usr-img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+}
+
+#photo{
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+#file{
+  display: none;
+}
+#uploadimg{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  padding: 6px 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  background-color: #ff914d;
+  margin-top: 20%;
+}
