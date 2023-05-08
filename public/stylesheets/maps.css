@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Ubuntu;
+  font-family: serif;
   box-sizing: border-box;
 }
 
@@ -74,38 +74,46 @@ nav a:hover {
     width: 100%;
   
 }
-.header-nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-  
-   
-    
-  }
-  
-  .header-nav a {
-    color: #425564;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 5px;
-    transition: color 0.3s linear;
-    font-family: 'Ubuntu';
-  }
-  
-  .header-nav li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 15px 0 0;
-    padding: 13px;
-  }
-  
-  .header-nav ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header-nav a:hover {
-    color: rgba(255,209,135,0.777450946198792);
-  }
+
+h1{
+  text-align: center;
+  align-items: center;
+  font-family: 'Viga';
+  color: #ff914d;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 50px 5px 5px 5px;
+}
+
+.pics{
+  margin: 5% 5% 5% 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+}
+.barcelona{
+  width: 50%;
+  height: 20%;
+  pad: 10px 10px 10px;
+  justify-content: space-between;
+}
+.munich{
+  width: 50%;
+  justify-content: space-between;
+}
+.paris{
+  width: 60%;
+  justify-content: space-between;
+}
+
+p{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
   

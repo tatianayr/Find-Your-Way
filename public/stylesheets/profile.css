@@ -61,6 +61,17 @@ nav a:hover {
   color: #ffde59;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+li {
+  display: block;
+  margin-right: 10px;
+  
+}
 .up {
   margin: 5% 5% 5% 5%;
   display: flex;
@@ -149,19 +160,100 @@ main {
     align-items: center;
 }
 
-.button{
+.change{
   width: 200px;
   height: 40px;
   border: 3px solid #ff914d;
   border-radius: 12px;
-  color: #425564;
-  background-color: white;
+  color: white;
+  background-color: #ff914d;
   font-size: 15px;
   font-weight: bold;
   padding: 5px;
   text-align: center;
   cursor: pointer;
   letter-spacing: 2px;
+  margin: -40% 30% 0 0;
+  align-items: center;
+  
+}
+.photo{
+  width: 200px;
+  height: 40px;
+  border: 3px solid #ffbd59;
+  border-radius: 12px;
+  color: white;
+  background-color: #ffbd59;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 2px;
+  margin: -40% 30% 0 0;
+  align-items: center;
+  
+}
+.delete{
+  width: 200px;
+  height: 40px;
+  border: 3px solid #fc3636;
+  border-radius: 12px;
+  color: white;
+  background-color: #fc3636;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 2px;
+  margin: -40% 30% 0 0;
+  align-items: center;
+  right: 0;
+  
 }
 
+.login_table{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -12%;
+  margin-bottom: 3%;
 
+}
+.text input{
+  width: 100%;
+  padding: 0 5px;
+  height: 30px;
+  border-bottom: 2px solid   #ff914d;
+  border-top: none;
+  color:#425564 ;
+  font-size: 20px;
+  margin: 10px 0;
+  margin-left: 30px;
+  border-left: none;
+  border-right: none;
+  background: none;
+  outline: none;
+  
+
+}
+.text-a input{
+  width: 100%;
+  padding: 0 5px;
+  height: 30px;
+  border-bottom: 2px solid   #ff914d;
+  border-top: none;
+  color:#425564 ;
+  font-size: 20px;
+  margin: 10px 0;
+  margin-left: 30px;
+  border-left: none;
+  border-right: none;
+  background: none;
+  outline: none;
+  margin-top: 10%;
+  margin-left: 240%;
+  margin-bottom: 20%;
+
+}
