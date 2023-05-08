@@ -36,6 +36,9 @@ async function getNameOfCitiesByForm() {
     let res = await resp.json();
     return res;
 }
+async function showCities() {
+    window.location.href = "maps1.html";
+  }
 
 
 async function question2() {
