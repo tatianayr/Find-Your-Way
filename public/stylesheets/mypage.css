@@ -15,7 +15,8 @@
 
 .logo {
     width: 7%;
-    margin-top: 5px;
+    margin-top: 30px;
+    margin-left: 40px;
 }
 
 .perfil {
@@ -26,41 +27,43 @@
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 2px 2%;
-    position: relative;
-}
-
-nav ul {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
+        top: 5px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 20px;
+     
+       
+  }
+  
+  
+  nav ul {
     list-style: none;
-    display: inline-block;
-    margin: 0 15px 0 0;
-    padding: 13px;
-}
-
-nav ul li a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 20px;
+  }
+  
+  nav  li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
     color: #425564;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 5px;
     transition: color 0.3s linear;
     font-family: 'Ubuntu';
-}
-
-nav a:hover {
+  }
+  
+  nav a:hover {
     color: #ffde59;
-}
+  }
 
 .go{
     width: 500px;
@@ -144,10 +147,11 @@ button span:after {
 }
 
 #content {
+    
     color: #425564;
     position: absolute;
-    top: 15%;
-    margin: 0 20% 0 20%;
+    top: 22%;
+    margin: 0 30% 0 30%;
     text-align: center;
 
 }

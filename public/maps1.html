@@ -1,82 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="stylesheets/maps.css">
-    <script src="javascripts/script_maps.js"></script> 
-    <title>Get User Location</title>
-    
-    
-    
+    <title>Google Maps Example</title>
+    <script src="javascripts/script_maps1.js"></script> 
+    <style>
+      #map {
+        height: 500px;
+        width: 100%;
+      }
+    </style>
     
   </head>
   <body>
-    <div class="hero">
-      <nav>
-          <img src="./imagens/logo.png" alt="logo" class="logo">
-          <ul>
-              <li><a href="index.html"> Home </a></li>
-              <li><a href="about.html"> About us </a> </li>
-              <li><a href="features.html"> Features </a> </li>
-              <li><a href="contacts.html"> Contacts </a> </li>
-              <li><a href="form.html"> Questionnaire </a> </li>
-              <li><a href="login.html"> Sign In</a> </li>
-              <li><a href="register.html"> Sign Up</a> </li>
-          </ul>
-          <a href="perfil.html"><img src="./imagens/perfilicon.png" alt="perfilicon" class="perfil"></a>
-      </nav>
-  </div>
-
-
     <div id="map"></div>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkLXt8NqoaAz8doyQQHrqMwyJXwy-o-rk&callback=initMap">
-        </script>
-    <script>
-      let map;
-
-      function initMap() {
-        // Create a new map centered on the user's current location
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            const { latitude, longitude } = position.coords;
-
-            map = new google.maps.Map(document.getElementById("map"), {
-              center: { lat: latitude, lng: longitude },
-              zoom: 15,
-            });
-
-            // Add a marker to the map at the user's current location
-            new google.maps.Marker({
-              position: { lat: latitude, lng: longitude },
-              map: map,
-            });
-          },
-          () => {
-            alert("Could not get your location");
-          }
-        );
-      }
-    </script>
-    <style>
-      #map {
-        height: 400px;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: row;
-        border: 2px solid #ffbd59;
-      }
-    </style>
-
-    <h1>Your Destinations</h1>
-    <div class="pics">
-    <img class="barcelona" src="./imagens/barcelona.jpeg" alt="barcelona">
-    <img  class="munich" src="./imagens/munich.jpeg" alt="munich">
-    <img class="paris" src="./imagens/paris.jpeg" alt="paris">
-    </div>
-    <p>Barcelona </p>
-    <p>Munich</p>
-    <p>Paris</p>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkLXt8NqoaAz8doyQQHrqMwyJXwy-o-rk&callback=initMap"></script>
+    
   </body>
 </html>

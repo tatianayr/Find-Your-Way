@@ -10,34 +10,55 @@
     <link rel="stylesheet" href="stylesheets/contacts.css">
 </head>
 
-
 <body>
     <header class="main-header">
-        
+        <div id="myContainer"></div>
     </header>
-    <div class="hero">
-        <nav>
-            <img src="./imagens/logo.png" alt="logo" class="logo">
-            <ul>
-                <li><a href="index.html"> Home </a></li>
-                <li><a href="about.html"> About us </a> </li>
-                <li><a href="features.html"> Features </a> </li>
-                <li><a href="contacts.html"> Contacts </a> </li>
-                <li><a href="form.html"> Questionnaire </a> </li>
-                <li><a href="login.html"> Sign In</a> </li>
-                <li><a href="register.html"> Sign Up</a> </li>
-            </ul>
-            <a href="perfil.html"><img src="./imagens/perfilicon.png" alt="perfilicon" class="perfil"></a>
-        </nav>
+    <nav>
+        <img src="imagens/logo.png" alt="logo" class="logo">
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="about.html"> About us </a> </li>
+            <li><a href="features.html"> Features </a> </li>
+            <li><a href="contacts.html"> Contacts </a> </li>
+            <li><a href="form.html"> Questionnaire </a> </li>
+            <li><a href="login.html"> Sign In</a> </li>
+            <li><a href="register.html"> Sign Up</a> </li>
+        </ul>
+        <a href="perfil.html"><img src="./imagens/perfilicon.png" alt="perfilicon" class="perfil"></a>
+    </nav>
+
+    <div class="content-wrap">
+        <div class="lSide">
+            <img id="left-side" class="left-side">
+        </div>
+        <div class="rSide">
+            <main class="main-content">
+                <h1>Contact us</h1>
+                <p>Our E-mails:</p>
+                <p>Camila Madatali - 20210832@iade.pt</p>
+                <p>Tatiana Yermachenkava - 20210697@iade.pt</p>
+            </main>
+        </div>
     </div>
-
-    <main class="main-content">
-        <h1>Contact us</h1>
-        <p>Our E-mails:</p>
-        <p>Camila Madatali - 20210832@iade.pt</p>
-        <p>Tatiana Yermachenkava - 20210697@iade.pt</p>
-
-
-    </main>
+    
+    
 
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  /*var imgElement = document.createElement('img');
+  imgElement.src = 'https://images.pexels.com/photos/6577281/pexels-photo-6577281.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
+  imgElement.style.width = '650px';
+  imgElement.style.margin = '0px';
+  imgElement.style.float = 'left';
+
+  var parentElement = document.getElementById('myContainer');
+  parentElement.appendChild(imgElement);*/
+
+  var image = document.getElementById("left-side");
+  image.src = "https://images.pexels.com/photos/6577281/pexels-photo-6577281.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+  image.style.margin = '0px';
+});
+</script>
+</html>

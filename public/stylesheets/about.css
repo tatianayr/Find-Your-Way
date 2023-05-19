@@ -28,35 +28,36 @@ body {
     right: 0;
     width: 40px;
   }
-  
   nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 2px 2%;
-    position: relative;
+    
+    position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 20px;
+       
   }
   
   nav ul {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+    list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 20px;
   }
   
-  nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 15px 0 0;
-    padding: 13px;
+  nav  li {
+    margin-left: 20px;
   }
   
   nav ul li a {
     color: #425564;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 5px;
     transition: color 0.3s linear;
     font-family: 'Ubuntu';
@@ -65,21 +66,20 @@ body {
   nav a:hover {
     color: #ffde59;
   }
-
-
   .main-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 35%;
-    padding: 124px 54px 72px;
+    height: 110%;
+    
+    padding: 0px 0px 90px ;
     box-sizing: border-box;
-    background-image: url(../imagens/4.jpg);
+   
     background-position: left top;
     background-size: auto;
-    align-items: center;
-  
   }
   
   .main-content h1 {
@@ -113,10 +113,7 @@ body {
     box-sizing: border-box;
   }
   
-  .main-header {
-    padding: 50px 100px;
   
-  }
   
   .header-nav {
     position: absolute;
