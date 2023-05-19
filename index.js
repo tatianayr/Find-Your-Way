@@ -21,8 +21,6 @@ const seasonsRouter= require("./routes/seasonsRoutes");
 const activitiesRouter=require("./routes/activityRoutes");
 const historyRouter=require("./routes/historyRoutes");
 const costRouter=require("./routes/costRoutes");
-const numberRouter=require("./routes/numbCitiesRoutes");
-app.use("/api/number", numberRouter);
 app.use("/api/cities", citiesRouter);
 app.use("/api/seasons",seasonsRouter);
 app.use("/api/activities", activitiesRouter);
