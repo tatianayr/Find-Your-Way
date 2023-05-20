@@ -5,6 +5,7 @@
 
     <title> Projeto Web </title>
     <meta charset="utf-8">
+    <meta name="author" content="Tatiana">
     <meta name="description" content="criação de uma web app">
     <meta name="keywords" content="html5, tecnologia">
     <link rel="stylesheet" href="stylesheets/about.css">
@@ -14,57 +15,76 @@
 <body>
 
     <header class="main-header">
-    
+
         <div id="myContainer"></div>
-       
+
     </header>
-    
-        <nav>
-           
-            <ul>
-                <li><a href="index.html"> Home </a></li>
-                <li><a href="about.html"> About us </a> </li>
-                <li><a href="features.html"> Features </a> </li>
-                <li><a href="contacts.html"> Contacts </a> </li>
-                <li><a href="form.html"> Questionnaire </a> </li>
-                <li><a href="login.html"> Sign In</a> </li>
-                <li><a href="register.html"> Sign Up</a> </li>
-            </ul>
-            <a href="perfil.html"><img src="./imagens/perfilicon.png" alt="perfilicon" class="perfil"></a>
-        </nav>
-    
+
+    <nav>
+        <img src="imagens/logo.png" alt="logo" class="logo">
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="features.html"> Features </a> </li>
+            <li><a href="about.html"> About us </a> </li>
+            <li><a href="contacts.html"> Contacts </a> </li>
+            <li><a href="form.html"> Questionnaire </a> </li>
+            <li id="signin-btn"><a href="login.html" onclick="signIn()">Sign In</a> </li>
+            <li id="profile-btn"  style="display: none;"><a href="teste.html" >Porfile &#x25EF;</a>
+                <ul>
+
+                    <li><a href="login.html"> Sign In</a></li>
+                    <li><a href=#> Saved Routes</a></li>
+                    <li><a href=#> Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
 
 
 
-    <main class="main-content">
-        <h1>About us</h1>
-        <h2>Welcome to our website!</h2>
-        <p>“Find your way” is a travel website designed to facilitate and streamline the planning process before every
-            trip, while guaranteeing the user the best traveling route for them. </p>
-        <p>The platform has a great focus on reliability and user-friendliness, so that anyone of any demographic can
-            visit us and efficiently plan their travels with great ease. </p>
-        <p> This website is part of a college project for the “Computer Science/Engineering” course, and was developed
-            by Camila Madatali and Tatiana Yermachenkava. </p>
-        <p> Thank you for visiting our website!</p>
-        <a href="contacts.html">
-            <button type="button">Contact us</button>
-        </a>
 
-    </main>
+    <div class="content-wrap">
+        <div class="lSide">
+            <img id="left-side" class="left-side">
+        </div>
+        <div class="rSide">
+            <main class="main-content">
+                <h1>About us</h1>
+                <h2>Welcome to our website!</h2>
+                <p>“Find your way” is a travel website designed to facilitate and streamline the planning process before
+                    every
+                    trip, while guaranteeing the user the best traveling route for them. 
+                <br>The platform has a great focus on reliability and user-friendliness, so that anyone of any
+                    demographic can
+                    visit us and efficiently plan their travels with great ease. <br>cience/Engineering” course, and was
+                    developed
+                    by Camila Madatali and Tatiana Yermachenkava. 
+                <br> Thank you for visiting our website!</p>
+                <a href="contacts.html">
+                    <button type="button">Contact us</button>
+                </a>
+
+            </main>
+        </div>
+    </div>
 </body>
+
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-  var imgElement = document.createElement('img');
-  imgElement.src = 'https://images.pexels.com/photos/7368314/pexels-photo-7368314.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
-  imgElement.style.width = '650px';
-  imgElement.style.margin = '0px';
-  imgElement.style.float = 'left';
-  
+    document.addEventListener('DOMContentLoaded', function () {
+        /*var imgElement = document.createElement('img');
+        imgElement.src = 'https://images.pexels.com/photos/6577281/pexels-photo-6577281.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
+        imgElement.style.width = '650px';
+        imgElement.style.margin = '0px';
+        imgElement.style.float = 'left';
+      
+        var parentElement = document.getElementById('myContainer');
+        parentElement.appendChild(imgElement);*/
 
-
-  var parentElement = document.getElementById('myContainer');
-  parentElement.appendChild(imgElement);
-});
+        var image = document.getElementById("left-side");
+        image.src = "https://images.pexels.com/photos/7368314/pexels-photo-7368314.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+        image.style.margin = '0px';
+    });
 </script>
+
 </html>

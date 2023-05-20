@@ -1,203 +1,200 @@
 @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .hero {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .logo {
-    width: 7%;
-    margin-top: 5px;
-  }
-  
-  .perfil {
-    cursor: pointer;
-    border-radius: 50%;
-    right: 0;
-    width: 40px;
-  }
-  nav {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  width: 7%;
+  margin-top: 5px;
+  z-index: 9999;
+}
+
+.perfil {
+  cursor: pointer;
+  border-radius: 50%;
+  right: 0;
+  width: 40px;
+}
+nav {
     
-    position: fixed;
-        top: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        width: 100%;
-        padding: 20px;
-       
-  }
-  
-  nav ul {
-    list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        margin-right: 20px;
-  }
-  
-  nav  li {
-    margin-left: 20px;
-  }
-  
-  nav ul li a {
-    color: #425564;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 5px;
-    transition: color 0.3s linear;
-    font-family: 'Ubuntu';
-  }
-  
-  nav a:hover {
-    color: #ffde59;
-  }
-  .main-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 110%;
-    
-    padding: 0px 0px 90px ;
-    box-sizing: border-box;
-   
-    background-position: left top;
-    background-size: auto;
-  }
-  
-  .main-content h1 {
-    font-size: 60px;
-    margin: 20px 0;
-    font-size: 5em;
-    font-weight: 800;
-    color: #355268;
-    line-height: 1em;
-    font-family: 'Viga';
-  }
-  
-  .main-content h2 {
-    font-size: 2em;
-    font-weight: 700;
-    color: black;
-    line-height: 1em;
-    font-family: 'Ubuntu';
-  }
-  
-  .main-content p {
-    font-size: 20px;
-    margin: 20px 0;
-    font-family: 'Ubuntu';
-  }
-  
-  .main-content {
-    width: 60%;
-    margin-left: 35%;
-    padding: 130px 54px 72px;
-    box-sizing: border-box;
-  }
-  
-  
-  
-  .header-nav {
-    position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
-  height: 5%;
-  margin: 15px;
-  }
-  
-  .header-nav a {
-    color: #425564;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 5px;
-    transition: color 0.3s linear;
-  }
-  
-  .header-nav li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 15px 0 0;
-    padding: 13px;
-  }
-  
-  .header-nav ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header-nav a:hover {
-    color: #d69e04;
-  }
-  
-  
-  button {
-    display: inline-block;
-    background-color:  #fa9304;
-  
-    border: 4px double #cccccc;
-    color: #ffffff;
-    text-align: center;
-    font-size: 28px;
-    padding: 15px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-  }
-  
-  button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  button:hover {
-    background-color: #f7c2f9;
-  }
-  
-  button:hover span {
-    padding-right: 25px;
-  }
-  
-  button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-  
-  button span:after {
-    content: "\00bb";
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
+  display: flex;
+  align-items: center;
+  /*justify-content: flex-end;*/
+  width: 100%;
+  padding: 10px;
+     
+}
+
+nav ul {
+  width: 93%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+nav  li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #425564;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  transition: color 0.3s linear;
+  font-family: 'Ubuntu';
+}
+
+nav a:hover {
+  color: #ffde59;
+}
+.main-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 110%;
+
+  padding: 0px 0px 90px;
+  box-sizing: border-box;
+
+  background-position: left top;
+  background-size: auto;
+}
+.main-content h1 {
+  margin: 5px 1;
+  margin-top: -8%;
+  font-size: 4em;
+  font-weight: 800;
+  color: #425564;
+  line-height: 1em;
+  font-family: 'Viga';
+}
+
+.main-content h2 {
+  font-size: 1.5em;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  font-weight: 700;
+  color: black;
+  line-height: 1em;
+  font-family: 'Ubuntu';
+}
+
+.main-content p {
+  font-size: 20px;
+  margin: 20px 0;
+
+  font-family: 'Ubuntu';
+}
+
+
+button {
+  display: inline-block;
+  background-color: #fa9304;
+
+  border: 4px double #cccccc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 15px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: #f7c2f9;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.content-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.content-wrap .lSide {
+  width: 40%;
+}
+
+.content-wrap .rSide {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: left;
+
+}
+
+.main-content {
+  width: 100%;
+  margin: 20% 5%;
+ 
+}
+
+.left-side {
+  width: 100%;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+}

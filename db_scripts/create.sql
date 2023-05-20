@@ -10,7 +10,9 @@ create table appuser (
 
 create table cities (
 	cit_id SERIAL,
-	cit_name VARCHAR(100) NOT NULL UNIQUE ,
+	cit_name VARCHAR(100) NOT NULL UNIQUE , 
+    cit_info TEXT,
+    cit_img VARCHAR(255) NOT NULL UNIQUE,
     geom geography(Point, 4326),
     primary key(cit_id)  
 );
