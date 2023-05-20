@@ -3,6 +3,18 @@ const img=document.querySelector('#photo');
 const file=document.querySelector('#file');
 const uploadbtn =document.querySelector('#uploadbtn');
 
+window.onload = async function () {
+    try {
+        let result = await checkAuthenticated(true);
+        if (result.err) {  throw result.err; }
+        window.user = user;
+        document.getElementById('name').textContent = "Hello "+window.user.name;
+     } catch (err) {
+        console.log(err);
+       // alert("Something went wrong!")
+    }
+}
+
 file.addEventListener('change', function(){
     const chosedfile = this.file(0);
 
