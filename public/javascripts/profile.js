@@ -1,32 +1,25 @@
-const imgDiv= document.querySelector('.user-img');
-const img=document.querySelector('#photo');
-const file=document.querySelector('#file');
-const uploadbtn =document.querySelector('#uploadbtn');
+function signIn() {
+    // Perform the sign-in logic here
+    
+    // Show the "Profile" button and hide the "Sign In" button
+    document.getElementById("signin-btn").style.display = "none";
+    document.getElementById("profile-btn").style.display = "block";
+  }
+  
+  // Check if the user is already signed in (you can modify this condition as per your actual authentication logic)
+  if (userIsSignedIn) {
+    document.getElementById("signin-btn").style.display = "none";
+    document.getElementById("profile-btn").style.display = "block";
+  }
+  
 
-window.onload = async function () {
-    try {
-        let result = await checkAuthenticated(true);
-        if (result.err) {  throw result.err; }
-        window.user = user;
-        document.getElementById('name').textContent = "Hello "+window.user.name;
-     } catch (err) {
-        console.log(err);
-       // alert("Something went wrong!")
-    }
+let profilePic = document.getElementById("profile-pic");
+let inputFile = document.getElementById("input-file");
+
+inputFile.onchange = function(){
+    profilePic.src = URL.createObjectURL(inputFile.files[0]);
 }
 
-file.addEventListener('change', function(){
-    const chosedfile = this.file(0);
-
-    if(chosedfile){
-        const reader = new FileReader();
-
-        reader.readAsDataURL('load', function(){
-            img.setAttribute('scr', reader.result);
-        });
-        reader.readAsDataURL(chosedfile);
-    }
-})
 
 
 
@@ -35,7 +28,10 @@ window.onload = async function () {
         let result = await checkAuthenticated(true);
         if (result.err) {  throw result.err; }
         window.user = user;
-        document.getElementById('user').textContent = "Hello "+window.user.name;
+        //document.getElementById('name').textContent = window.user.name;
+        letrouteRes =await requestUserRoutes();
+        if(!routeRes.successful) throw {msg: "Something went wrong!"};
+        populateRoutes(routeRes.routes);
      } catch (err) {
         console.log(err);
        // alert("Something went wrong!")
