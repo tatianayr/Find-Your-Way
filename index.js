@@ -27,10 +27,11 @@ app.use("/api/activities", activitiesRouter);
 app.use("/api/history",historyRouter);
 app.use("/api/cost",costRouter);
 const usersRouter = require("./routes/usersRoutes");
-
-
-
 app.use("/api/users",usersRouter);
+const routeRouter = require("./routes/cidadeRoutes");
+app.use("/api/route", routeRouter);
+
+
 
 
 
