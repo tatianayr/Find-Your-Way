@@ -8,6 +8,9 @@
     <meta name="description" content="criação de uma web app">
     <meta name="keywords" content="html5, tecnologia">
     <link rel="stylesheet" href="stylesheets/features.css">
+    <script src="javascripts/requests/usersRequests.js"></script>
+    <script src="javascripts/utils/verifications.js"></script>
+    <script src="javascripts/profile.js "> </script>
 </head>
 
 
@@ -22,10 +25,10 @@
                 <li><a href="contacts.html"> Contacts </a> </li>
                 <li><a href="form.html"> Questionnaire </a> </li>
                 <li id="signin-btn"><a href="login.html" onclick="signIn()">Sign In</a> </li>
-                <li id="profile-btn"  style="display: none;"><a href="perfil.html" >Porfile &#x25EF;</a>
+                <li id="profile-btn"  style="display: none;"><a href="perfil.html" >Profile &#x25EF;</a>
                     <ul>
                         <li><a href=#> Saved Routes</a></li>
-                        <li><a href=#> Logout</a></li>
+                    <li><a onclick="logout()" >Logout</a></li>
                     </ul>
                 </li>
             </ul>
