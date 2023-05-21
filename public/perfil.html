@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/teste.css">
+    <script src="javascripts/requests/usersRequests.js"></script>
+    <script src="javascripts/utils/verifications.js"></script>
     <script src="javascripts/profile.js "> </script>
     <script src="javascripts/login.js"></script>
 
@@ -28,12 +30,13 @@
             <li id="profile-btn" style="display: none;"><a href="perfil.html" >Porfile &#x25EF;</a>
                 <ul>
                     <li><a href=#> Saved Routes</a></li>
-                    <li><a href=#> Logout</a></li>
+                    
                 </ul>
             </li>
         </ul>
     </nav>
-
+    
+        <input type="button" value="Logout" onclick="logout()"> 
     <div class="hero">
         <div class="card ">
             <h1>NAME</h1>
