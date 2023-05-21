@@ -6,7 +6,11 @@ create table appuser (
     usr_pass varchar(200) not null, 
     usr_token varchar(200),
     primary key (usr_id));
-
+CREATE TABLE route (
+  route_id SERIAL PRIMARY KEY,
+  cit_name VARCHAR(100) NOT NULL,
+  geom geography(Point, 4326) NOT NULL
+);
 
 create table cities (
 	cit_id SERIAL,
