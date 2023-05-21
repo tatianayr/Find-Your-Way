@@ -37,16 +37,3 @@ window.onload = async function () {
 }
 
 
-async function logout() {
-  let msgDOM = document.getElementById("msg");
-  msgDOM.textContent = "";
-  try {
-      let result = await requestLogout();
-      if (!result.successful || result.err)
-          throw result.err || { err: "Not successfull" }
-      window.location.pathname = "public\index.html"
-  } catch (err) {
-      console.log(err);
-      // alert("Something is not working");
-  }
-}
