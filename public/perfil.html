@@ -5,78 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/profile.css">
-    <script src="javascripts/profile.js"></script>
-    <title>Perfil</title>
+    <link rel="stylesheet" href="stylesheets/teste.css">
+    <script src="javascripts/profile.js "> </script>
+    <script src="javascripts/login.js"></script>
+
+    <title>Document</title>
 </head>
 
 <body>
+    <header class="main-header">
+        <div id="myContainer"></div>
+    </header>
+    <nav>
+        <img src="imagens/logo.png" alt="logo" class="logo">
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="features.html"> Features </a> </li>
+            <li><a href="about.html"> About us </a> </li>
+            <li><a href="contacts.html"> Contacts </a> </li>
+            <li><a href="form.html"> Questionnaire </a> </li>
+            <li id="signin-btn"><a href="login.html"  >Sign In</a> </li>
+            <li id="profile-btn" style="display: block;"><a href="perfil.html" >Porfile &#x25EF;</a>
+                <ul>
+                    <li><a href=#> Saved Routes</a></li>
+                    <li><a href=#> Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
     <div class="hero">
-        <nav>
-            <img src="./imagens/logo.png" alt="logo" class="logo">
-            <ul>
-                <li><a href="index.html"> Home </a></li>
-                <li><a href="about.html"> About us </a> </li>
-                <li><a href="features.html"> Features </a> </li>
-                <li><a href="contacts.html"> Contacts </a> </li>
-                <li><a href="form.html"> Questionnaire </a> </li>
-                <li><a href="login.html"> Sign In</a> </li>
-                <li><a href="register.html"> Sign Up</a> </li>
-            </ul>
-            <a href="perfil.html"><img src="./imagens/perfilicon.png" alt="perfilicon" class="perfil"></a>
-        </nav>
+        <div class="card ">
+            <h1>NAME</h1>
+            <label for="input-file">update image</label>
+            <img src="imagens/2.jpg" alt="perfil" id="profile-pic">
+            <input type="file" accept="image/jpg, image/png, image/jpef" id="input-file"> 
+        </div>
     </div>
-
-    <section class="up">
-        <a href="perfil.html">
-            <button class="settings" type="button">Account Settings</button>
-        </a>
-        <a href="maps1.html">
-            <button class="routes" type="button">Saved Routes</button>
-        </a>
-        
-            <input class="out" type="button" value="Logout" onclick="logout()"> 
-    </section>
-
-    <div class="user-img">
-        <img src="./imagens/User.png" id="photo">
-        <input type="file"  id="file">
-        <label for="file" id="uploadimg"><i class="fas fa-camara"></i></label>
-    </div>
-    <script src="javascripts/profile.js"></script>
-    <main>
-
-           
-            
-            <a href="perfil.html">
-                <button class="change" type="button">Change Account</button>
-            </a>
-           
-
-    
-        <section class="login_table">  
-            <table>
-                <tr>
-                    <td class="text"><input type="text" autocomplete="username" id="name"></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td class="text"><input type="email" autocomplete="email" id="email" placeholder="anadias@gmail.com"></td>
-                </tr>
-            </table>
-        </section>  
-    </main> 
-            <section class="up">
-                <a  href="perfil.html">
-                    <button class="photo" type="button">Change Photo</button>
-                </a>
-                <a  href="perfil.html">
-                    <button class="delete" type="button">Delete Account</button>
-                </a> 
-            </section>
-          
-   
 
 </body>
 

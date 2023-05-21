@@ -135,35 +135,45 @@ body {
   width: 40px;
 }
 
+.logo {
+  width: 7%;
+  margin-top: 5px;
+  z-index: 9999;
+}
+
+
 nav {
+    
+  position: fixed;
+  top: 0;
+  right: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /*justify-content: flex-end;*/
   width: 100%;
-  padding: 2px 2%;
-  position: relative;
+  padding: 10px;
+     
 }
 
 nav ul {
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+  width: 93%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
 }
 
-nav ul li {
-  list-style: none;
-  display: inline-block;
-  margin: 0 15px 0 0;
-  padding: 13px;
+nav  li {
+  margin-left: 20px;
 }
 
 nav ul li a {
   color: #425564;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 5px;
+  font-size: 13px;
+  letter-spacing: 2px;
   transition: color 0.3s linear;
   font-family: 'Ubuntu';
 }
@@ -171,41 +181,39 @@ nav ul li a {
 nav a:hover {
   color: #ffde59;
 }
-
-.footer-nav {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin: 15px;
+nav ul li ul {
+  display: none;
+  position: absolute;
+  border:  2px solid  #ffde59;
+  width: 100%;
+  padding: 5%;
+  border-radius: 0% 0% 10% 10%;
+}
+nav ul li:hover ul {
+  display: block;
 }
 
-  .footer-nav a {
-    color: #425564;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 5px;
-    transition: color 0.3s linear;
-  }
-  
-  .footer-nav li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 15px 0 0;
-    padding: 13px;
-  }
-  
-  .footer-nav ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .footer-nav a:hover {
-    color: rgba(255,209,135,0.777450946198792);
-  }
+nav ul li ul li {
+  width: 100%;
+  padding: 2% 2%;
+
+}
+
+nav ul li ul li a{
+  color: #425564;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 5px;
+  transition: color 0.3s linear;
+  font-family: 'Ubuntu';
+  padding: 3%;
+}
 
 
+nav ul li ul li a:hover {
+  color: #ffde59;
+}
 
 
 
