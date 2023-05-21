@@ -8,23 +8,12 @@
     box-sizing: border-box;
 }
 
-.hero {
-    width: 100%;
-    height: 100%;
-}
-
 .logo {
     width: 7%;
     margin-top: 30px;
     margin-left: 40px;
 }
 
-.perfil {
-    cursor: pointer;
-    border-radius: 50%;
-    right: 0;
-    width: 40px;
-}
 
 nav {
     
@@ -35,7 +24,7 @@ nav {
     align-items: center;
     /*justify-content: flex-end;*/
     width: 100%;
-    padding: 1%;
+    padding: 0%;
        
   }
   
@@ -54,14 +43,13 @@ nav {
   }
   
   nav ul li a {
-    display: block;
     color: #425564;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 5px;
-    transition: color 0.3s linear;
-    font-family: 'Ubuntu';
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  transition: color 0.3s linear;
+  font-family: 'Ubuntu';
   }
   nav ul li ul {
     display: none;
@@ -187,8 +175,8 @@ button span:after {
     
     color: #425564;
     position: absolute;
-    top: 22%;
-    margin: 0 30% 0 30%;
+    top: 20%;
+    margin: 0 20% 0 20%;
     text-align: center;
 
 }
@@ -306,7 +294,6 @@ button span:after {
     color: #355268;
     background: #ffbd59;
     border-radius: 15px;
-    
 }
 
 .wrapper h1 {
@@ -320,41 +307,59 @@ button span:after {
 
 .conatiner {
     display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
     font-family: 'Ubuntu';
     color: #355268;
 
+
 }
 
+.box {
+    height: 150px;
+    padding: 20px;
+    font-family: 'Ubuntu';
+    background: #fff;
+    border: 8px #425564;
 
+}
+
+.box1,
 .box2,
 .box3,
 .box4 h2 {
     text-align: center;
     color: #355268;
     padding: 10px 0;
-    font-size: 23px;
+    font-size: 20px;
     font-family: 'Ubuntu';
 
 }
 
 
-
+.box1,
 .box2,
 .box3,
 .box4 p {
     text-align: center;
     color: #355268;
-    font-size: 17px;
+    font-size: 14px;
     line-height: 1.6;
     font-family: 'Ubuntu';
 }
 
 
 
+.box1 {
+    height: 150px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #eee856;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 2);
+}
+
 .box2 {
-    height: 170px;
+    height: 150px;
     padding: 20px;
     border-radius: 5px;
     background: #EE8D56;
@@ -362,7 +367,7 @@ button span:after {
 }
 
 .box3 {
-    height: 170px;
+    height: 150px;
     padding: 20px;
     border-radius: 5px;
     background: #8BDDA7;
@@ -370,7 +375,7 @@ button span:after {
 }
 
 .box4 {
-    height: 170px;
+    height: 150px;
     padding: 20px;
     border-radius: 5px;
     background: #56CAEE;

@@ -6,6 +6,8 @@ window.onload = async function () {
         throw result.err;
       }
       window.user = user;
+      var userName = "John Doe";
+      document.getElementById('user').textContent = "Hello "+ userName;
       document.getElementById("signin-btn").style.display = "none";
       document.getElementById("profile-btn").style.display = "block";
 

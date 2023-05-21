@@ -53,7 +53,8 @@ nav ul {
 }
 
 nav  li {
-  margin-left: 20px;
+  margin-left: 3%;
+    position: relative;
 }
 
 nav ul li a {
