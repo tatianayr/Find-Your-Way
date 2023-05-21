@@ -4,6 +4,7 @@
 <head>
 	<title> Projeto Web </title>
 	<meta charset="utf-8">
+	<meta name="author" content="Tatiana">
 	<meta name="description" content="criação de uma web app">
 	<meta name="keywords" content="html5, tecnologia">
 	<link rel="stylesheet" href="stylesheets/form.css">
@@ -18,19 +19,19 @@
 <body>
 
 	
-	<nav class="header-nav">
-		
-		<ul>
-			<li><a href="index.html"> Home </a></li>
-			<li><a href="about.html"> About us </a> </li>
-			<li><a href="features.html"> Features </a> </li>
-			<li><a href="contacts.html"> Contacts </a> </li>
-			<li><a href="form.html"> Questionnaire </a> </li>
-			<li><a href="login.html"> Sign In</a> </li>
-			<li><a href="register.html"> Sign Up</a> </li>
-		</ul>
-
-	</nav>
+	<nav>
+		<!-- <img src="./imagens/logo.png" alt="logo" class="logo">-->
+		 <ul>
+			 <li><a href="index.html"> Home </a></li>
+			 <li><a href="about.html"> About us </a> </li>
+			 <li><a href="features.html"> Features </a> </li>
+			 <li><a href="contacts.html"> Contacts </a> </li>
+			 <li><a href="form.html"> Questionnaire </a> </li>
+			 <li><a href="login.html"> Sign In</a> </li>
+			 <li><a href="register.html"> Sign Up</a> </li>
+		 </ul>
+		 <a href="perfil.html"><img src="./imagens/perfilicon.png" alt="perfilicon" class="perfil"></a>
+	 </nav>
 
 
 	<section>
@@ -80,6 +81,8 @@
 			  <div id="mapContainer">
 				<div id="map" style="height: 20em;"></div>
 			  </div>
+			  
+
 
 		</form>
 	</section>
@@ -105,6 +108,9 @@
 		async function nextPage() {
 			if (currentQuestion == 1) {
 				let questions = document.getElementById("q1");
+				//Este trecho de código percorre cada nó filho do elemento questions. Presume-se que esses nós sejam os elementos de opção da pergunta 
+				//atual. O loop verifica se algum elemento está marcado como selecionado (ou seja, a opção foi escolhida) e, se for o caso, armazena o
+				// valor da opção na variável season.
 				questions.childNodes.forEach(element => {
 					if (element.checked) season = element.value;
 				});
@@ -148,6 +154,33 @@
 			}
 		}
 	</script>
+
+<script>
+	// Function to check if the user is logged in
+	async function checkLoginStatus() {
+		try {
+			const response = await fetch('/api/users/auth');
+			if (response.status === 200) {
+				// User is logged in, continue with the questionnaire
+				return;
+			} else {
+				// User is not logged in, redirect to the login page
+				window.location.href = 'login.html';
+			}
+		} catch (err) {
+			console.log(err);
+			// Handle error
+		}
+	}
+
+	// Wait for the DOM to load
+	document.addEventListener('DOMContentLoaded', function () {
+		// Check login status before proceeding
+		checkLoginStatus();
+	});
+
+	// Rest of your JavaScript code
+</script>
 </body>
 
 </html>

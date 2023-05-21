@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const City = require("../models/cidadeModel");
 
-router.get('', async function (req, res, next){
+router.get('/all', async function (req, res, next){
     try {
         console.log("Get all cities");
         let result= await City.getCities();
@@ -43,5 +43,33 @@ router.get('/polygon', async (req, res, next) => {
       res.status(500).send(err);
     }
   });
+
+  router.post('/', async (req, res) => {
+    try {
+      const { seasonId, historyId, activityId, costId } = req.body;
+  
+      // Call the getNameOfCitiesByForm function to retrieve cities data
+      const citiesResponse = await City.getNameOfCitiesByForm(seasonId, historyId, activityId, costId);
+      const cities = citiesResponse.result;
+  
+      // Save cit_name and geom to the route table
+      for (const city of cities) {
+        await pool.query("INSERT INTO route (cit_name, geom) VALUES ($1, ST_GeomFromGeoJSON($2))", [city.cit_name, JSON.stringify(city.geom)]);
+      }
+  
+      res.sendStatus(200);
+    } catch (error) {
+      console.error('Error saving route data:', error);
+      res.sendStatus(500);
+    }
+  });
+ 
+  
+  
+  
+  
+  
+  
+
 
 module.exports = router;
