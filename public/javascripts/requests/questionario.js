@@ -101,7 +101,7 @@ async function showCities() {
         console.error(error);
       }
      
-  }
+}
 
 
 async function question2() {
