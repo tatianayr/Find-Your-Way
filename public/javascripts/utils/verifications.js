@@ -6,10 +6,10 @@ function changePage(url,msg,verbose) {
 
 // It will go to the login page if not authenticated
 // Otherwise it will set the window.user with the user profile
-async function checkAuthenticated(verbose) {
+async function checkAuthenticated(verbose, redirect) {
     try {
         let result = await requestProfile();
-        if (result.unauthenticated)
+        if (result.unauthenticated && redirect)
             changePage("index.html","Not authenticated. Going to login page",verbose);
         else if (!result.successful || result.err) 
             throw err || "Not successful";
