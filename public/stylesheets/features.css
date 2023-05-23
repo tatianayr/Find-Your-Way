@@ -116,11 +116,11 @@ nav ul li ul li a:hover {
 
 .section h2 {
   font-family: 'Viga';
-  font-size: 50px;
+  font-size: 35px;
   font-weight: 700;
   color: black;
   line-height: 1em;
-  text-transform: uppercase;
+  text-transform: none;
   margin: 0;
 }
 
@@ -147,6 +147,7 @@ nav ul li ul li a:hover {
 }
 .main-header h2{
   font-family: 'Viga';
+
 }
 
 
@@ -163,6 +164,7 @@ button {
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+
 }
 
 button span {
