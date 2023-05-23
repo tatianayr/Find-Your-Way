@@ -11,11 +11,9 @@ async function login() {
       msgDOM.textContent = "Wrong username or password";
     } else {
       msgDOM.textContent = "Login successful!";
-      // Update the navigation bar state after successful login
       document.getElementById("signin-btn").style.display = "none";
       document.getElementById("profile-btn").style.display = "block";
 
-      // Redirect to the desired page
       window.location.href = "perfil.html";
     }
   } catch (err) {

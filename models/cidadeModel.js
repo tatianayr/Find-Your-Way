@@ -69,11 +69,7 @@ class City{
               geom: JSON.parse(cit.st_asgeojson)
             };
           });
-    
-          for (const city of cities) {
-            await pool.query("INSERT INTO route (cit_name, geom) VALUES ($1, ST_GeomFromGeoJSON($2))", [city.cit_name, JSON.stringify(city.geom)]);
-          }
-    
+  
           return { status: 200, result: cities };
         } catch (err) {
           console.log(err);

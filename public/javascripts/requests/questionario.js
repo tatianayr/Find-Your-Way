@@ -1,19 +1,3 @@
-const { search } = require("../../../routes/historyRoutes");
-
-
-async function getCities() {
-  const resp = await fetch('/api/seasons/' + season);
-  let res = await resp.json();
-  return res;
-}
-
-
-async function getHistory() {
-  const resp = await fetch('/api/history/' + history);
-  let res = await resp.json();
-  return res;
-}
-
 async function getHistoryBySeason() {
   const resp = await fetch('/api/seasons/history/' + season);
   let res = await resp.json();
@@ -29,23 +13,6 @@ async function getCostByActivity() {
   const resp = await fetch('/api/activities/cost/' + season + "/" + activity + "/" + cost);
   let res = await resp.json();
   return res;
-}
-async function saveRouteData(routeData) {
-  try {
-    const resp = await fetch('/api/route', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(routeData)
-    });
-
-    if (!resp.ok) {
-      throw new Error(resp.statusText);
-    }
-  } catch (error) {
-    throw new Error(error);
-  }
 }
 
 async function getNameOfCitiesByForm() {
@@ -88,6 +55,7 @@ async function showCities() {
           });
           markers.push(marker);
         });
+        
 
         const directionsService = new google.maps.DirectionsService();
         const directionsRenderer = new google.maps.DirectionsRenderer({ map: map });
@@ -184,23 +152,4 @@ async function question4() {
     i++;
   });
 }
-async function question5() {
-  let q5 = document.getElementById("q5");
-  while (q5.firstChild) {
-    q5.removeChild(q5.firstChild);
-  }
-  let res = await getNumberOfCities();
-  console.log(res);
-  let i = 1;
-  res.forEach(historyDb => {
-    let input = document.createElement("input");
-    let newline = document.createElement("br");
-    input.type = "checkbox";
-    input.name = "history";
-    input.value = i;
-    document.getElementById("q5").appendChild(input);
-    document.getElementById("q5").insertAdjacentHTML("beforeend", historyDb.act_name);
-    document.getElementById("q5").appendChild(newline);
-    i++;
-  });
-} 
+
