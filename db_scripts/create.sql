@@ -1,5 +1,4 @@
 
-
 create table appuser (
     usr_id serial,
     usr_name varchar(60) not null,
@@ -7,10 +6,13 @@ create table appuser (
     usr_token varchar(200),
     primary key (usr_id));
     
-CREATE TABLE route (
-  route_id SERIAL PRIMARY KEY,
-  cit_name VARCHAR(100) NOT NULL,
-  geom geography(Point, 4326) NOT NULL
+  
+
+CREATE TABLE savedroute (
+    savedroute_id serial,
+    user_id INTEGER NOT NULL,
+    params TEXT NOT NULL,
+    primary key (savedroute_id)
 );
 
 create table cities (

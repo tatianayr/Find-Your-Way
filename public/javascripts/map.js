@@ -51,7 +51,7 @@ function initMap() {
 }
 
 function  getCitiesFromURL() {
-
+ 
     const urlParams = new URLSearchParams(localStorage.getItem("params"));
     console.log("MAP -> " + urlParams);
     const citiesParam = urlParams.get('cities');
