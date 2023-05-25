@@ -1,3 +1,16 @@
+
+async function getCities() {
+  const resp = await fetch('/api/seasons/' + season);
+  let res = await resp.json();
+  return res;
+}
+
+async function getHistory() {
+  const resp = await fetch('/api/history/' + history);
+  let res = await resp.json();
+  return res;
+}
+
 async function getHistoryBySeason() {
   const resp = await fetch('/api/seasons/history/' + season);
   let res = await resp.json();
@@ -20,6 +33,10 @@ async function getNameOfCitiesByForm() {
     const resp = await fetch('/api/cities/form/' + season + '/' + histories + '/' + activity + '/' + cost);
     const res = await resp.json();
     console.log(res);
+
+    // Armazene os valores no localStorage ou sessionStorage
+    localStorage.setItem('cities', JSON.stringify(res));
+
     return { status: 200, result: res };
   } catch (error) {
     console.error(error);
@@ -27,67 +44,6 @@ async function getNameOfCitiesByForm() {
   }
 }
 
-async function showCities() {
-  try {
-    const response = await getNameOfCitiesByForm();
-    const cities = response.result;
-
-    navigator.geolocation.getCurrentPosition(
-      async (position) => {
-        const { latitude, longitude } = position.coords;
-
-        const map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: latitude, lng: longitude },
-          zoom: 15,
-        });
-        new google.maps.Marker({
-          position: { lat: latitude, lng: longitude },
-          map: map,
-        });
-
-        const markers = [];
-        cities.forEach(city => {
-          const position = city.geom.coordinates;
-          const marker = new google.maps.Marker({
-            position: new google.maps.LatLng(position[1], position[0]),
-            map: map,
-            title: city.cit_name,
-          });
-          markers.push(marker);
-        });
-        
-
-        const directionsService = new google.maps.DirectionsService();
-        const directionsRenderer = new google.maps.DirectionsRenderer({ map: map });
-        const waypoints = markers.map(marker => ({
-          location: marker.getPosition(),
-          stopover: true,
-        }));
-        directionsService.route(
-          {
-            origin: { lat: latitude, lng: longitude },
-            destination: { lat: latitude, lng: longitude },
-            waypoints: waypoints,
-            optimizeWaypoints: true,
-            travelMode: google.maps.TravelMode.DRIVING,
-          },
-          (result, status) => {
-            if (status === google.maps.DirectionsStatus.OK) {
-              directionsRenderer.setDirections(result);
-            } else {
-              console.error("Error calculating directions:", status);
-            }
-          }
-        );
-      },
-      () => {
-        alert("Could not get your location");
-      }
-    );
-  } catch (error) {
-    console.error(error);
-  }
-}
 
 
 async function question2() {
@@ -138,7 +94,7 @@ async function question4() {
   }
   let res = await getCostByActivity();
   console.log(res);
-  if (!Array.isArray(res)) return; // check if res is an array
+  if (!Array.isArray(res)) return;
   let i = 1;
   res.forEach(activityDb => {
     let input = document.createElement("input");
@@ -152,4 +108,23 @@ async function question4() {
     i++;
   });
 }
-
+async function question5() {
+  let q5 = document.getElementById("q5");
+  while (q5.firstChild) {
+    q5.removeChild(q5.firstChild);
+  }
+  let res = await getNumberOfCities();
+  console.log(res);
+  let i = 1;
+  res.forEach(historyDb => {
+    let input = document.createElement("input");
+    let newline = document.createElement("br");
+    input.type = "checkbox";
+    input.name = "history";
+    input.value = i;
+    document.getElementById("q5").appendChild(input);
+    document.getElementById("q5").insertAdjacentHTML("beforeend", historyDb.act_name);
+    document.getElementById("q5").appendChild(newline);
+    i++;
+  });
+} 

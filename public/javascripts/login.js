@@ -5,6 +5,7 @@ async function login() {
     let name = document.getElementById("name").value;
     let pass = document.getElementById("password").value;
     let result = await requestLogin(name, pass);
+
     if (result.err) {
       msgDOM.textContent = "An error occurred";
     } else if (!result.successful) {
@@ -21,6 +22,7 @@ async function login() {
     msgDOM.textContent = "An error occurred";
   }
 }
+
 window.onload = async function () {
   try {
     let result = await checkAuthenticated(true);

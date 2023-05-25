@@ -8,11 +8,13 @@
 	<meta name="description" content="criação de uma web app">
 	<meta name="keywords" content="html5, tecnologia">
 	<link rel="stylesheet" href="stylesheets/form.css">
-	<script src="javascripts/script_maps1.js"></script>
+	
+
+	
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="javascripts/requests/questionario.js"></script>
-	<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkLXt8NqoaAz8doyQQHrqMwyJXwy-o-rk&callback=initMap"> </script>
+	<!--<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkLXt8NqoaAz8doyQQHrqMwyJXwy-o-rk&callback=initMap"> </script>-->
 	
 
 </head>
@@ -20,19 +22,24 @@
 <body>
 
 	
-	<nav class="header-nav">
-		
-		<ul>
-			<li><a href="index.html"> Home </a></li>
-			<li><a href="about.html"> About us </a> </li>
-			<li><a href="features.html"> Features </a> </li>
-			<li><a href="contacts.html"> Contacts </a> </li>
-			<li><a href="form.html"> Questionnaire </a> </li>
-			<li><a href="login.html"> Sign In</a> </li>
-			<li><a href="register.html"> Sign Up</a> </li>
-		</ul>
+	<nav>
+        <img src="imagens/logo.png" alt="logo" class="logo">
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="features.html"> Features </a> </li>
+            <li><a href="about.html"> About us </a> </li>
+            <li><a href="contacts.html"> Contacts </a> </li>
+            <li><a href="form.html"class="active"> Questionnaire </a> </li>
+            <li id="signin-btn"><a href="login.html">Sign In</a> </li>
+            <li id="profile-btn"  style="display: none;"><a href="perfil.html" >Porfile &#x25EF;</a>
+                <ul>
+                    <li><a href=#> Saved Routes</a></li>
+                    <li><a onclick="logout()" >Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
-	</nav>
 
 
 	<section>
@@ -40,7 +47,7 @@
 			<div class="question" id="page1">
 				<h1>Question 1</h1>
 				<h2>At what season would you like to make your trip?</h2>
-				<div id="q1">
+				<div class="options" id="q1">
 					<input type="radio" name="season" value="1">Spring<br>
 					<input type="radio" name="season" value="2">Summer<br>
 					<input type="radio" name="season" value="3">Autumn<br>
@@ -53,7 +60,7 @@
 
 			<div class="question" id="page2">
 				<h1>Question 2</h1>
-				<h2>which historic architecture draws more attention?</h2>
+				<h2>Which historic architecture draws more attention?</h2>
 				<div id="q2">
 				</div>
 				<input type="button" value="Previous" onclick="prevPage()" id="prevButton">
@@ -76,86 +83,15 @@
 				<div id="cityList"></div>
 				
 				<input type="button" value="Previous" onclick="prevPage()" id="prevButton">
-				<input type="submit" value="Submit" id="subButton" onclick="showCities(); return false;">
-			  </div>
-
-			  <div id="mapContainer">
-				<div id="map" style="height: 20em;"></div>
-			  </div>
+				<input type="submit" value="Submit" id="subButton">			 
+			</div>
 
 		</form>
 	</section>
 
 
-	<script>
-		
-		var currentQuestion = 1;
-		var questionPages = document.querySelectorAll(".question");
-		var season = 1;
-		var histories = 1;
-		var activity =1;
-		var cost=1;
-		var number=1;
-
-		
-
-		async function nextPage() {
-			if (currentQuestion == 1) {
-				let questions = document.getElementById("q1");
-				questions.childNodes.forEach(element => {
-					if (element.checked) season = element.value;
-				});
-				await question2();
-			}
-			
-			else if (currentQuestion == 2) {
-				let questions = document.getElementById("q2");
-				questions.childNodes.forEach(element => {
-					if (element.checked) histories = element.value;
-				});
-				await question3();
-			}
-			else if (currentQuestion == 3) {
-				let questions = document.getElementById("q3");
-				questions.childNodes.forEach(element => {
-					if (element.checked) activity = element.value;
-				});
-				await question4();
-			}
-			
-			if (currentQuestion < questionPages.length) {
-				questionPages[currentQuestion - 1].style.display = "none";
-				currentQuestion++;
-				questionPages[currentQuestion - 1].style.display = "block";
-			}
-		}
-		
-
-		function prevPage() {
-			if (currentQuestion > 1) {
-				questionPages[currentQuestion - 1].style.display = "none";
-				currentQuestion--;
-				questionPages[currentQuestion - 1].style.display = "block";
-			}
-		}
-	</script>
-	<script>
-		async function checkLoginStatus() {
-			try {
-				const response = await fetch('/api/users/auth');
-				if (response.status === 200) {
-					return;
-				} else {
-					window.location.href = 'login.html';
-				}
-			} catch (err) {
-				console.log(err);
-			}
-		}
-			document.addEventListener('DOMContentLoaded', function () {
-			checkLoginStatus();
-		});
-		</script>
+	<script src="javascripts/form.js"></script>
+	
 </body>
 
 </html>

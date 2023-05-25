@@ -44,6 +44,36 @@ router.get('/form/:seasonId/:historyId/:activityId/:costId', async (req, res, ne
   }
 });
 
+router.post('/', async (req, res) => {
+  try {
+    const { seasonId, historyId, activityId, costId } = req.body;
+
+    // Call the getNameOfCitiesByForm function to retrieve cities data
+    const citiesResponse = await City.getNameOfCitiesByForm(seasonId, historyId, activityId, costId);
+    const cities = citiesResponse.result;
+
+    // Save cit_name and geom to the route table
+    for (const city of cities) {
+      await pool.query("INSERT INTO route (cit_name, geom) VALUES ($1, ST_GeomFromGeoJSON($2))", [city.cit_name, JSON.stringify(city.geom)]);
+    }
+
+    res.sendStatus(200);
+  } catch (error) {
+    console.error('Error saving route data:', error);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/city/:name', async (req, res) => {
+  try {
+    const cit_name = req.params.name;
+    const cityInfo = await City.getCityInfo(cit_name);
+    res.json(cityInfo);
+  } catch (error) {
+    console.error('Error:', error.message);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
   
   
   

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/teste.css">
+    <link rel="stylesheet" href="stylesheets/perfil.css">
     <script src="javascripts/requests/usersRequests.js"></script>
     <script src="javascripts/utils/verifications.js"></script>
     <script src="javascripts/profile.js"></script>
@@ -29,7 +29,7 @@
             <li id="signin-btn"><a href="login.html"  >Sign In</a> </li>
             <li id="profile-btn" style="display: none;"><a href="perfil.html" >Porfile &#x25EF;</a>
                 <ul>
-                    <li><a href=#> Saved Routes</a></li>
+                    <li><a href="save.html"> Saved Routes</a></li>
                     <li><a onclick="logout()" >Logout</a></li>
                     
                 </ul>
@@ -37,14 +37,17 @@
         </ul>
     </nav>
     
-      
     <div class="hero">
-        <div class="card ">
-            <h1><span id="user">Username: ______</span></h1>
-
-          
+        <div class="card">
+          <h1><span id="user">Username: ______</span></h1>
         </div>
-    </div>
+        <div id="status"></div>
+        <input type="file" id="file" onchange="_ReadImage()">
+        <img id="img">
+        <input type="button" value="Load Image" onclick="_LoadImage()">
+       
+      </div>
+      
 
 </body>
 

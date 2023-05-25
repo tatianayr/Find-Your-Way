@@ -7,6 +7,7 @@ function dbUserToUser(dbUser)  {
     let user = new User();
     user.id = dbUser.usr_id;
     user.name = dbUser.usr_name;
+    
     return user;
 }
 
@@ -73,7 +74,6 @@ class User {
             let isPass = await bcrypt.compare(user.pass,dbUser.usr_pass);
             if (!isPass) 
                 return { status: 401, result: { msg: "Wrong username or password!"}};
-           
             return { status: 200, result: dbUserToUser(dbUser) } ;
         } catch (err) {
             console.log(err);
@@ -108,6 +108,18 @@ class User {
             return { status: 500, result: err };
         }
     }
-}
+
+
+static async saveRoute(user_id, params) {
+        try {
+            await pool.query('INSERT INTO savedroute (user_id, params) VALUES ($1, $2)', [user_id, params]);
+          
+          return { status: 200, result: { msg: 'Route saved!' } };
+        } catch (err) {
+          console.log(err);  
+          return { status: 500, result: err };
+        }
+      }
+    }
 
 module.exports = User;

@@ -69,11 +69,42 @@ class City{
               geom: JSON.parse(cit.st_asgeojson)
             };
           });
-  
+    
+          for (const city of cities) {
+            await pool.query("INSERT INTO route (cit_name, geom) VALUES ($1, ST_GeomFromGeoJSON($2))", [city.cit_name, JSON.stringify(city.geom)]);
+          }
+    
           return { status: 200, result: cities };
         } catch (err) {
           console.log(err);
           return { status: 500, result: { msg: "Something went wrong." } };
+        }
+      }
+      static async getCityInfo(cit_name) {
+        try {
+          // Consulta ao banco de dados para obter as informações e a imagem da cidade correspondente
+          const query = `SELECT cit_info, cit_img FROM cities WHERE cit_name = $1`;
+          const values = [cit_name];
+      
+          const result = await pool.query(query, values);
+      
+          if (result.rows.length > 0) {
+            const cit_info = result.rows[0].cit_info;
+            const cit_img = result.rows[0].cit_img;
+      
+            // Montar os dados de resposta em um objeto
+            const responseData = {
+              cit_info,
+              cit_img
+            };
+      
+            return responseData;
+          } else {
+            throw new Error('Cidade não encontrada');
+          }
+        } catch (error) {
+          console.error('Erro na consulta ao banco de dados:', error);
+          throw new Error('Erro no servidor');
         }
       }
     }

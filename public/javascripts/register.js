@@ -7,6 +7,7 @@ async function register() {
         let res = await requestRegister(name,pass);
         if (res.successful) {
             msgDOM.textContent = "Account created. Go to login page";
+            window.location.href = "login.html";
         } else {
             msgDOM.textContent = "Was not able to register";
         }      

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -19,13 +20,13 @@ body {
 section {
   position: relative;
   padding: 5%;
-  width: 60%;
-  height: 850px;
-  margin-top: 3%;
+  width: 100%;
+
+  margin-top: 4%;
   display: flex; 
   align-items: center;
   justify-content: center;
- 
+  
   
 }
 #nextButton, #prevButton, #subButton {
@@ -77,42 +78,58 @@ section {
 }
 
 h2 {
-  text-align: left;
-  padding: 10px;
-  font-size: 40px;
+  text-align: center;
+  margin-bottom: 3%;
+  color: black;
+  font-size: 35px;
+  font-family: 'Viga';
 }
 h1 {
   text-align: left;
   padding: 20px;
   font-size: 2em;
   text-align: center;
-  font-size: 80px;
+  font-size: 60px;
+  font-family: 'Viga';
+  color: #425564;
+}
+
+.options{
+  font-family: 'Ubuntu';
+
+}
+
+
+.logo {
+  width: 7%;
+  margin-top: 5px;
+  z-index: 9999;
 }
 
 nav {
-    
   position: fixed;
-      top: 0;
-      right: 0;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      width: 100%;
-      padding: 20px;
-    
-     
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
 }
 
 nav ul {
+  width: 100%;
   list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      margin-right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
 }
 
-nav  li {
-  margin-left: 20px;
+nav li {
+  margin-left: 3%;
+  position: relative;
 }
 
 nav ul li a {
@@ -120,20 +137,59 @@ nav ul li a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 13px;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   transition: color 0.3s linear;
   font-family: 'Ubuntu';
+  padding: 10px;
+}
+nav ul li a.active {
+  color: #ffde59;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  transition: color 0.3s linear;
+  font-family: 'Ubuntu';
+  padding: 10px;
 }
 
 nav a:hover {
   color: #ffde59;
 }
 
-.logo{
-  padding: 5px;
-  size: 20px;
-  height: auto;
-  width: 500px;
-  margin-left: -130px;
- margin-top: -60px;
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 2px solid #ffde59;
+  width: 100%;
+  padding: 5%;
+  border-radius: 0% 0% 10% 10%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  width: 100%;
+  padding: 2% 2%;
+}
+
+nav ul li ul li a {
+  color: #425564;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 5px;
+  transition: color 0.3s linear;
+  font-family: 'Ubuntu';
+  padding: 3%;
+}
+
+nav ul li ul li a:hover {
+  color: #ffde59;
 }

@@ -16,6 +16,7 @@ router.get('/auth', auth.verifyAuth, async function (req, res, next) {
         let user = new User();
         // sendig only the name
         user.name = result.result.name;
+        user.id = req.user.id;
         res.status(result.status).send(user);
     } catch (err) {
         console.log(err);
@@ -71,12 +72,26 @@ router.post('/auth', async function (req, res, next) {
         // and save it on the database
         user.token = token;
         result = await User.saveToken(user);
+        console.log(user);
         res.status(200).send({ msg: "Successful Login!" });
     } catch (err) {
         console.log(err);
         res.status(500).send(err);
     }
 });
+
+router.post('/savedroute', async (req, res) => {
+    try {
+      const { userId, params } = req.body;
+  
+      const result = await User.saveRoute({ id: userId, params: params });
+  
+      res.status(result.status).json(result.result);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
 
 module.exports = router;
 

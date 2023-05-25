@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-}
 
 * {
   margin: 0;
@@ -13,9 +8,10 @@ body {
   box-sizing: border-box;
 }
 
-.hero {
-  width: 100%;
-  height: 100%;
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -24,37 +20,30 @@ body {
   z-index: 9999;
 }
 
-.perfil {
-  cursor: pointer;
-  border-radius: 50%;
-  right: 0;
-  width: 40px;
-}
 nav {
-    
   position: fixed;
   top: 0;
   right: 0;
   display: flex;
   align-items: center;
-  /*justify-content: flex-end;*/
   width: 100%;
   padding: 10px;
-     
+  background-color: #fff;
 }
 
 nav ul {
-  width: 93%;
+  width: 100%;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
   margin-right: 20px;
 }
 
-nav  li {
+nav li {
   margin-left: 3%;
-    position: relative;
+  position: relative;
 }
 
 nav ul li a {
@@ -65,21 +54,36 @@ nav ul li a {
   letter-spacing: 2px;
   transition: color 0.3s linear;
   font-family: 'Ubuntu';
+  padding: 10px;
+}
+nav ul li a.active {
+  color: #ffde59;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  transition: color 0.3s linear;
+  font-family: 'Ubuntu';
+  padding: 10px;
 }
 
 nav a:hover {
   color: #ffde59;
 }
 
-
 nav ul li ul {
   display: none;
   position: absolute;
-  border:  2px solid  #ffde59;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 2px solid #ffde59;
   width: 100%;
   padding: 5%;
   border-radius: 0% 0% 10% 10%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 nav ul li:hover ul {
   display: block;
 }
@@ -87,10 +91,9 @@ nav ul li:hover ul {
 nav ul li ul li {
   width: 100%;
   padding: 2% 2%;
-
 }
 
-nav ul li ul li a{
+nav ul li ul li a {
   color: #425564;
   text-decoration: none;
   text-transform: uppercase;
@@ -101,11 +104,9 @@ nav ul li ul li a{
   padding: 3%;
 }
 
-
 nav ul li ul li a:hover {
   color: #ffde59;
 }
-
 
 
 .main-header {
@@ -115,38 +116,31 @@ nav ul li ul li a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  height: 110%;
-
-  padding: 0px 0px 90px;
+  height: 100%;
+  padding: 0px 0px 70px;
   box-sizing: border-box;
-
   background-position: left top;
   background-size: auto;
 }
-.main-content h1 {
-  margin: 5px 1;
-  margin-top: -8%;
-  font-size: 4em;
-  font-weight: 800;
-  color: #425564;
-  line-height: 1em;
-  font-family: 'Viga';
-}
 
+.main-content {
+  width: 100%;
+  margin: 15% 5%;
+ 
+}
 .main-content h2 {
-  font-size: 1.5em;
-  margin-top: 2%;
+  font-size: 40px;
   margin-bottom: 5%;
   font-weight: 700;
   color: black;
   line-height: 1em;
-  font-family: 'Ubuntu';
+  font-family: 'Viga';
 }
 
 .main-content p {
-  font-size: 20px;
+  font-size: 25px;
   margin: 20px 0;
-
+  line-height: 1.3em;
   font-family: 'Ubuntu';
 }
 
@@ -224,11 +218,7 @@ button span:after {
 
 }
 
-.main-content {
-  width: 100%;
-  margin: 20% 5%;
- 
-}
+
 
 .left-side {
   width: 100%;
