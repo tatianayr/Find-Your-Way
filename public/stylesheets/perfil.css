@@ -12,41 +12,6 @@ body {
   box-sizing: border-box;
 }
 
-.hero{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-}
-
-.card img{
-  width: 10%;
-  height: 5%;
-  border-radius: 50%;
-  
-}
-
-.main-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 110%;
-  
-  padding: 0px 0px 90px ;
-  box-sizing: border-box;
- 
-  background-position: left top;
-  background-size: auto;
-}
-
-.main-content {
-  width: 100%;
-}
-
 
 .logo {
   width: 7%;
@@ -129,3 +94,72 @@ nav a:hover {
   color: #ffde59;
 }
 
+
+.main-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 0px 0px 70px;
+  box-sizing: border-box;
+  background-position: left top;
+  background-size: auto;
+}
+
+.main-content {
+  width: 100%;
+  margin: 15% 5%;
+ 
+}
+.main-content h1 {
+  font-size: 40px;
+  margin-bottom: 5%;
+  font-weight: 700;
+  color: black;
+  line-height: 1em;
+  font-family: 'Viga';
+}
+
+
+
+.content-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.content-wrap .lSide {
+  width: 30%;
+
+  margin-top: 15%;
+margin-left: 15%;
+}
+
+.content-wrap .rSide {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: left;
+  margin-top: 15%;
+
+}
+
+
+
+.left-side {
+  width: 100%;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.img{
+  width: 100%;
+  border-radius: 20%;
+}

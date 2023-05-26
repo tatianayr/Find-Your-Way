@@ -26,28 +26,59 @@
             <li><a href="about.html"> About us </a> </li>
             <li><a href="contacts.html"> Contacts </a> </li>
             <li><a href="form.html"> Questionnaire </a> </li>
-            <li id="signin-btn"><a href="login.html"  >Sign In</a> </li>
-            <li id="profile-btn" style="display: none;"><a href="perfil.html" >Porfile &#x25EF;</a>
+            <li id="signin-btn"><a href="login.html">Sign In</a> </li>
+            <li id="profile-btn" style="display: none;"><a href="perfil.html">Porfile &#x25EF;</a>
                 <ul>
                     <li><a href="save.html"> Saved Routes</a></li>
-                    <li><a onclick="logout()" >Logout</a></li>
-                    
+                    <li><a onclick="logout()">Logout</a></li>
+
                 </ul>
             </li>
         </ul>
     </nav>
-    
-    <div class="hero">
-        <div class="card">
-          <h1><span id="user">Username: ______</span></h1>
+    <div class="content-wrap">
+        <div class="lSide">
+            <img src="imagens/travel.jpg" class="img" alt="user.png">
+            <div  id="status"></div>
+            <input type="file" id="file" onchange="_ReadImage()">
+            <img id="img">
+            <input type="button" value="Change Photo" onclick="_LoadImage()">
         </div>
-        <div id="status"></div>
-        <input type="file" id="file" onchange="_ReadImage()">
-        <img id="img">
-        <input type="button" value="Load Image" onclick="_LoadImage()">
-       
-      </div>
-      
+        <div class="rSide">
+            <main class="main-content">
+                
+                    <h1><span id="user">Username: ______</span></h1>
+
+            </main>
+        </div>
+    </div>
+
+
+
+
+    <!---<div class="content-wrap">
+        <div class="lSide">
+            <div  id="status"></div>
+            <input type="file" id="file" onchange="_ReadImage()">
+            <img id="img">
+            <input type="button" value="Load Image" onclick="_LoadImage()">
+        </div>
+        <div class="rSide">
+            <main class="main-content">
+                
+                    <h1><span id="user">Username: ______</span></h1>
+
+            </main>
+        </div>
+    </div>--->
+
+
+
+
+
+
+
+
 
 </body>
 
