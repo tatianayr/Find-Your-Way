@@ -56,6 +56,17 @@ nav ul li a {
   transition: color 0.3s linear;
   font-family: 'Ubuntu';
 }
+
+nav ul li a.active {
+  display: block;
+  color: #ffde59;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 5px;
+  transition: color 0.3s linear;
+  font-family: 'Ubuntu';
+}
 nav ul li ul {
   display: none;
   position: absolute;
@@ -145,7 +156,7 @@ margin-left: 15%;
   align-items: center;
   justify-items: center;
   text-align: left;
-  margin-top: 15%;
+  margin-top: 0;
 
 }
 
@@ -162,4 +173,20 @@ margin-left: 15%;
 .img{
   width: 100%;
   border-radius: 20%;
+}
+
+.button{
+    width: 30%;
+    height: 10%;
+    border: 2px solid white;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 5px;
+    background:#ff914d ;
+    border-radius: 12px;
+}
+.user{
+  font-size: 30px;
+ 
 }

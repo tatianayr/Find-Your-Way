@@ -32,4 +32,26 @@ async function logout() {
   }
 }
 
-
+const _ReadImage = () => {
+  document.querySelector("#status").innerText = `Reading File...`;
+  let f = document.querySelector("#file");
+  if(f.files && f.files[0]) {
+    var reader = new FileReader();
+    reader.onload = e => {
+      _SaveImage(e.target.result);
+    }
+    reader.readAsDataURL(f.files[0]);
+  }
+}
+const _SaveImage = img => {
+  localStorage.setItem("img", img);
+  document.querySelector("#status").innerText = `Saved!`;
+}
+const _LoadImage = () => {
+  if(localStorage.getItem("img")) {
+    document.querySelector("#img").src = localStorage.getItem("img");
+    document.querySelector("#status").innerText = `Image Loaded!`;
+  } else {
+    document.querySelector("#status").innerText = `No Image!`;
+  }
+} 
