@@ -15,7 +15,7 @@ async function login() {
       document.getElementById("signin-btn").style.display = "none";
       document.getElementById("profile-btn").style.display = "block";
 
-      window.location.href = "perfil.html";
+      window.location.href = "index.html";
     }
   } catch (err) {
     console.log(err);
