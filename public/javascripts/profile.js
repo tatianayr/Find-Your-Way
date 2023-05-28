@@ -122,10 +122,8 @@ function  getCitiesFromURL() {
 async function getCityInfo(cit_name) {
   try {
     // Make a request to the database or API to fetch the city information and image
-    // You can use libraries like axios or fetch to make the HTTP request
 
-    // Example using fetch:
-    const response = await fetch(`/api/cities/city/${cit_name}`); // Replace with the appropriate API endpoint or database query
+    const response = await fetch(`/api/cities/city/${cit_name}`); 
 
     if (!response.ok) {
       throw new Error('Failed to fetch city information');
@@ -133,11 +131,9 @@ async function getCityInfo(cit_name) {
 
     const data = await response.json();
 
-    // Extract the relevant information from the response data
     const cit_info = data.cit_info;
     const cit_img = data.cit_img;
 
-    // Create an object with the retrieved information
     const cityInfo = {
       cit_info,
       cit_img
@@ -239,11 +235,11 @@ function loadProfile() {
         document.getElementById('profile-btn').style.display = 'block';
         document.getElementById('map').style.display = 'block';
 
-        // Load and display the saved route
-        const userId = result.user.userId; // Assuming the property name is "userId"
+     
+        const userId = result.user.userId; 
         displaySavedRoute(userId);
       } else if (result.unauthenticated) {
-        // User is not authenticated
+        
         document.getElementById('signin-btn').style.display = 'block';
         document.getElementById('profile-btn').style.display = 'none';
         document.getElementById('map').style.display = 'none';
@@ -265,13 +261,11 @@ function displaySavedRoute(userId) {
       if (result.successful) {
         const routeParams = result.route.params;
 
-        // Use the route parameters to display the route on the map
-        // Example: Assuming routeParams contains the necessary information for displaying the route
-        // You'll need to adapt this code to your specific use case
+       
         const routeCoordinates = [
-          { lat: 37.7749, lng: -122.4194 }, // Example coordinate 1
-          { lat: 37.3382, lng: -121.8863 }, // Example coordinate 2
-          // Add more coordinates as needed
+          { lat: 37.7749, lng: -122.4194 }, 
+          { lat: 37.3382, lng: -121.8863 }, 
+         
         ];
 
         const routePath = new google.maps.Polyline({
@@ -291,7 +285,7 @@ function displaySavedRoute(userId) {
       console.error(err);
     });
 }
-/*function saveRoute(userId, params) {
+function saveRoute(userId, params) {
   const data = {
     user_id: userId,
     params: params
@@ -308,7 +302,7 @@ function displaySavedRoute(userId) {
     .then(response => {
       if (response.status === 200) {
         console.log('Route saved!');
-        window.location.href = 'perfil.html'; // Redireciona para a página de perfil
+        window.location.href = 'perfil.html';
       } else {
         console.log('Failed to save route.');
       }
@@ -317,30 +311,31 @@ function displaySavedRoute(userId) {
       console.error(err);
     });
 }
-*/
 
 /*function Save(){
   requestSavedRoute(localStorage.getItem("userId"), localStorage.getItem("params"));}*/
-/*   function Save() {
+
+
+  function Save() {
       const userId = parseInt(localStorage.getItem("userId"));
 const params = localStorage.getItem("params");
 saveRoute(userId, params);
       // Log the params to check the URL-encoded string
     
       try {
-        const decodedParams = decodeURIComponent(params); // Decode the URL-encoded string
-        console.log("decodedParams:", decodedParams); // Log the decoded string
+        const decodedParams = decodeURIComponent(params); 
+        console.log("decodedParams:", decodedParams); 
     
-        const jsonStartIndex = decodedParams.indexOf("{"); // Find the index of the first "{" character
-        const jsonEndIndex = decodedParams.lastIndexOf("}"); // Find the index of the last "}" character
+        const jsonStartIndex = decodedParams.indexOf("{"); 
+        const jsonEndIndex = decodedParams.lastIndexOf("}"); 
     
-        const jsonSubstring = decodedParams.substring(jsonStartIndex, jsonEndIndex + 1); // Extract the JSON substring
-        console.log("jsonSubstring:", jsonSubstring); // Log the extracted JSON substring
-    
-        const parsedParams = JSON.parse(jsonSubstring); // Parse the JSON substring
-        console.log("parsedParams:", parsedParams); // Log the parsed JSON object
-    
+        const jsonSubstring = decodedParams.substring(jsonStartIndex, jsonEndIndex + 1); 
+        console.log("jsonSubstring:", jsonSubstring); 
+
+        const parsedParams = JSON.parse(jsonSubstring); 
+        console.log("parsedParams:", parsedParams); 
         // Make the API request to save the route
+
         requestSavedRoute(userId, parsedParams)
           .then(response => {
             if (response.successful) {
@@ -360,16 +355,13 @@ saveRoute(userId, params);
             console.error('Error saving the route:', error);
           });
       } catch (error) {
-        console.error("Error parsing JSON:", error); // Log any errors during JSON parsing
+        console.error("Error parsing JSON:", error); 
       }
-    }*/
+    }
     
-    function saveRoute() {
-      // Save the route
-      
-      // Redirect to perfil.html
+    /*function saveRoute() {
       window.location.href = "perfil.html";
-  }
+  }*/
     
     
     
