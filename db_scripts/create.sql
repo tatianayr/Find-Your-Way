@@ -6,7 +6,11 @@ create table appuser (
     usr_token varchar(200),
     primary key (usr_id));
     
-  
+create table route(
+    route_id serial,
+    cit_name varchar (80) not null, 
+    primary key (route_id)
+);
 
 CREATE TABLE savedroute (
     savedroute_id serial,
